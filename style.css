@@ -204,7 +204,7 @@ footer {
 
 footer .logo {
     margin-top: 80px;
-    translate: scaleX(-1);
+    transform: scaleX(-1);
     height: 10vh;
     object-fit: contain;
 }

@@ -7,7 +7,26 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-
+        <div id="cover">
+            <div class="form">
+                <img src="./Assets/close.svg" alt="" id="close">
+                <h1>LOGIN</h1>
+                <div class="inputs">
+                    <input type="text" id="email" placeholder="Fly High number / Email Address">
+                    <input type="password" id="password" placeholder="Password">
+                    <div class="options">
+                        <input type="checkbox" name="checkb" id="remember"> 
+                        <label for="checkb" id="remember_label">Remember me</label>
+                        <a href="">Reset Password</a>
+                    </div>
+                </div>
+                <button>Login</button>
+                <div class="buttons">
+                    <a href="">Forgot Memebership number</a>
+                    <p>Not a FlyHigh member? <a href="">Join now</a></p>
+                </div>
+            </div>
+        </div>
         <header>
             <nav>
                 <img src="./Assets/logo.png" alt="">
@@ -19,7 +38,7 @@
                     <li>CORPORATE</li>
                 </ul>
                 <div class="account">
-                    <a href="">LOGIN</a> | <a href="">SIGN UP</a>
+                    <a href="javascript:void(0);" onclick="login_show()">LOGIN</a> | <a href="">SIGN UP</a>
                 </div>
             </nav>
         </header>

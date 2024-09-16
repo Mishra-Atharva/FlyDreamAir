@@ -59,7 +59,6 @@ nav .account a {
 
 .highlight {
     background-position: center;
-    position: relative;
     display: flex;
     height: 90vh;
     text-align: center;
@@ -250,5 +249,90 @@ footer .links img {
 
     &:hover {
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+}
+
+
+/* login */
+#cover {
+    text-align: center;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    background-color: antiquewhite;
+}
+
+.form .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.form input {
+    padding: 20px;
+    border: 1px solid black;
+    width: 350px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.form .options {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.form #remember {
+    width: 15px;
+    height: 15px;
+}
+
+.form #remember_label {
+    position: absolute;
+    left: 32%;
+}
+
+.form a {
+    text-decoration: none;
+    color: black;
+}
+
+.form .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 12px;
+}
+
+.form button {
+    width: 80px;
+    height: 30px;
+}
+
+.form img {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 25px;
+    height: 25px;
+
+    &:hover {
+        cursor: pointer;
     }
 }

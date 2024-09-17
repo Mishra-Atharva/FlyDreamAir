@@ -16,3 +16,7 @@ document.getElementById("close").addEventListener("click", () => {
     password.value = "";
     remember.checked = false;
 });
+
+window.onload = function() {
+    document.body.style.visibility = 'visible';
+};

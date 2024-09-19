@@ -1,0 +1,133 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="../Assets/logo.png" alt="">
+            <ul>
+                <li><a href="">PLAN TRAVEL</a></li>
+                <li><a href="">FLYING WITH US</a></li>
+                <li><a href="">TRAVEL INFO</a></li>
+                <li><a href="">FLY HIGH/FREQUENT FLIER</a></li>
+                <li><a href="">CORPORATE</a></li>
+            </ul>
+            <div class="account">
+                <a href="javascript:void(0);" onclick="login_show()">LOGIN</a> | <a href="">SIGN UP</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main">
+        <section class="signup">
+            <div class="container">
+
+                <div class="top">
+
+                    <h2 id="title">Sign up with....</h2>
+                    <div class="images">
+                        <img src="../Assets/google.png" alt="">
+                        <img src="../Assets/linkedin.png" alt="">
+                    </div>
+
+                    <hr>
+                    
+                    <div class="subtitle">
+                        <h2 id="subtitle">Sign up with your details</h2>
+                        
+                        <p id="p1">Complete all the fields marked with * </p>
+                        
+                        <p id="p2">Register as FlyHigh member?</p>
+                    </div>
+                    
+                    <div class="radio">
+                        <input type="radio" name="yes" id="yes">
+                        <label for="yes">Yes</label>
+                        
+                        <input type="radio" name="no" id="no">
+                        <label for="no">No</label>
+                    </div>
+                </div>
+                    
+                <div class="form">
+                    
+                    <div class="first_name">
+                        <label for="first_name">First Name *</label><br>
+                        <input type="text" name="first_name" id="first_name" placeholder="First Name">
+                    </div>
+                    
+                    <div class="last_name">
+                        <label for="last_name">Last Name *</label><br>
+                        <input type="text" name="last_name" id="last_name" placeholder="Last Name">
+                    </div>
+                    
+                    <div class="email">
+                        <label for="email">Email address *</label><br>
+                        <input type="text" name="email" id="email" placeholder="johndoe@gmail.com">
+                    </div>
+                    
+                    <div class="dob">
+                        <label for="dob">Date of birth *</label><br>
+                        <input type="text" name="dob" id="dob" placeholder="DD / MM / YY">
+                    </div>
+                    
+                    <div class="password">
+                        <label for="password">Create Password *</label><br>
+                        <input type="password" name="password" id="password" placeholder="Password">
+                    </div>
+                    
+                    <div class="departure">
+                        <label for="departure">Select your preffered country of departure</label><br>
+                        <select name="departure" id="departure">
+                            <option value="" disabled selected>Select a country</option>
+                            <option value="US">United States</option>
+                            <option value="FR">France</option>
+                            <option value="IT">Italy</option>
+                            <option value="ES">Spain</option>
+                            <option value="JP">Japan</option>
+                            <option value="TH">Thailand</option>
+                            <option value="AU">Australia</option>
+                            <option value="CN">China</option>
+                            <option value="IN">India</option>
+                            <option value="GB">United Kingdom</option>
+                            <option value="MX">Mexico</option>
+                            <option value="DE">Germany</option>
+                            <option value="GR">Greece</option>
+                            <option value="TR">Turkey</option>
+                            <option value="AE">United Arab Emirates</option>
+                            <option value="BR">Brazil</option>
+                            <option value="CA">Canada</option>
+                            <option value="SG">Singapore</option>
+                            <option value="ID">Indonesia</option>
+                            <option value="MY">Malaysia</option>
+                            <option value="EG">Egypt</option>
+                        </select>
+                    </div>
+                    
+                    <div class="password_info">
+                        <p>Your password must contain 8 to 16 alphanumeric characters and should be a combination of a number (0-9), lowercase letter (a-z), uppercase letter (A-Z) and special character (!@#$%^&*()).</p>
+                    </div>
+
+                </div>
+                
+                <br>
+                <br>
+                <br>
+                <p id="policy"> Please read our <a href="">privacy policyfor</a> information on how customised social media advertising works and how we handle your data.</p>
+            
+                <div class="accept">
+                    <input type="checkbox" name="accept" id="accept">
+                    <label for="accept">By submitting my information, I acknowledge and accept the terms of FlyDreamAir Airlines’ Privacy Policy, terms and conditions of the Registered Customer account and consent to receive Singapore Airlines Group communications (news & offers) & Partner Promotions.</label>
+                </div>
+
+                <button>Create Account</button>
+            </div>
+        </section>
+    </div>
+    
+</body>
+</html>

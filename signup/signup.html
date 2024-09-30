@@ -6,6 +6,26 @@
     <link rel="stylesheet" href="signup.css">
 </head>
 <body>
+    <div id="cover">
+        <div class="form">
+            <img src="../Assets/close.svg" alt="" id="close">
+            <h1>LOGIN</h1>
+            <div class="inputs">
+                <input type="text" id="email_input" placeholder="Fly High number / Email Address">
+                <input type="password" id="password_input" placeholder="Password">
+                <div class="options">
+                    <input type="checkbox" name="checkb" id="remember"> 
+                    <label for="checkb" id="remember_label">Remember me</label>
+                    <a href="">Reset Password</a>
+                </div>
+            </div>
+            <button>Login</button>
+            <div class="buttons">
+                <a href="">Forgot Memebership number</a>
+                <p>Not a FlyHigh member? <a href="">Join now</a></p>
+            </div>
+        </div>
+    </div>
     <header>
         <nav>
             <img src="../Assets/logo.png" alt="">
@@ -17,24 +37,29 @@
                 <li><a href="">CORPORATE</a></li>
             </ul>
             <div class="account">
-                <a href="javascript:void(0);" onclick="login_show()">LOGIN</a> | <a href="">SIGN UP</a>
+                <a href="javascript:void(0);" onclick="login_show()">LOGIN</a> | <a href="./signup.html">SIGN UP</a>
             </div>
         </nav>
     </header>
 
     <div class="main">
         <section class="signup">
+
+            <div class="intro">
+                <h1>Sign up and take off</h1>
+                <p>Creating an account saves you time when booking a flight. And if you become a FlyHigh member, you'll also enjoy exclusive perks and privileges. It only takes a minute.</p>
+                <p>Already a Registered Customer or FlyHigh member? <a href="javascript:void(0);" onclick="login_show()">Log in</a></p>
+                <br>
+                <br>
+            </div>
+            <br>
             <div class="container">
+                <br>
+                <br>
+
+                <h1>CREATE ACCOUNT</h1>
 
                 <div class="top">
-
-                    <h2 id="title">Sign up with....</h2>
-                    <div class="images">
-                        <img src="../Assets/google.png" alt="">
-                        <img src="../Assets/linkedin.png" alt="">
-                    </div>
-
-                    <hr>
                     
                     <div class="subtitle">
                         <h2 id="subtitle">Sign up with your details</h2>
@@ -52,8 +77,9 @@
                         <label for="no">No</label>
                     </div>
                 </div>
-                    
-                <div class="form">
+                    <br>
+                    <br>
+                <div class="form-signup">
                     
                     <div class="first_name">
                         <label for="first_name">First Name *</label><br>
@@ -117,17 +143,53 @@
                 <br>
                 <br>
                 <br>
-                <p id="policy"> Please read our <a href="">privacy policyfor</a> information on how customised social media advertising works and how we handle your data.</p>
+                <p id="policy"> Please read our <a href="">privacy policy</a> for information on how customised social media advertising works and how we handle your data.</p>
             
                 <div class="accept">
                     <input type="checkbox" name="accept" id="accept">
                     <label for="accept">By submitting my information, I acknowledge and accept the terms of FlyDreamAir Airlines’ Privacy Policy, terms and conditions of the Registered Customer account and consent to receive Singapore Airlines Group communications (news & offers) & Partner Promotions.</label>
                 </div>
-
-                <button>Create Account</button>
+                <br>
+                <br>
+                <button class="create">Create Account</button>
+                <br>
+                <br>
+                <br>
             </div>
+        </section>
+        <br>
+        <br>
+        <section class="footer">
+            <div class="footer_head">
+                <p>
+                    <mark id="header">COMPANY</mark> <br> <a href="">Corporate policies</a> <br> <a href="">Investor relations</a> <br> <a href="">Sustainability</a> <br> <a href="">Sponsorships</a> <br> <a href="">Tender notice</a> <br> <a href="">Careers</a> <br> <a href="FlyingHighLab"></a><br>
+                </p>
+                <p>
+                    <mark id="header">GROUP PARTNER</mark> <br> <a href="">FlyingHighShop</a> <br> <a href="">FlyH+</a> <br> <a href="">Agent360</a> <br> <a href="">FlyConnect</a> <br>
+                </p>
+                <p>
+                    <mark id="header">WHERE WE FLY</mark> <br> <a href="">From Australia</a> <br> <a href="">Flights to countries</a> <br> <a href="">Flights to cities</a> <br>
+                </p>
+                <p>
+                    <mark id="header">SUPPORT</mark> <br> <a href="">FAQs</a> <br> <a href="">Help</a> <br> <a href="">Chatbot</a> <br> <a href="">Contact Us</a> <br> <a href="">Feedback</a> <br> <a href="">Mange voucher</a> <br> <a href="">User Engagement</a> <br>
+                </p>
+            </div>
+            <br>
+            <footer>
+                <img class="logo" src="../Assets/logo.png" alt=""><br>
+                <div class="info"><p><a href="">Privacy policy</a> | <a href="">Cookie policy</a> | <a href="">Terms & Conditions</a> | <a href="">Keep your data safe</a> | <a href="">Report Vulnerability</a></p></div>
+                <br><div class="info2"><p>Hyperlinks with this icon are links to third-party websites. Use of such websites is subject to their terms and conditions.</p></div>
+                <div class="links">
+                    <img src="../Assets/linkedin.png" alt="">
+                    <img src="../Assets/twitter.png" alt="">
+                    <img src="../Assets/youtube.svg" alt="">
+                    <img src="../Assets/instagram.png" alt="">
+                </div>
+
+            </footer>
         </section>
     </div>
     
 </body>
+<script src="signup.js"></script>
 </html>

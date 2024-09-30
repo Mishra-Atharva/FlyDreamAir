@@ -50,21 +50,47 @@ hr {
 
 .signup {
     background-color: rgb(193, 174, 112);
-    height: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: max-content auto;
     justify-content: center;
     align-items: center;
 }
 
+.signup a {
+    text-decoration: none;
+    color: black;
+}
+
+.intro {
+    position: relative;
+    left: 15%;
+    text-align: center;
+    width: 70%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro h1 {
+    font-size: 40px;
+}
+
 .container {
+    margin: 50px;
+    height: 140vh;
+    transform: scale(1);
     background-color: lightgray;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
-    width: 80%;
+    width: 80vw;
     box-sizing: border-box;
+}
+
+.container h1 {
+    font-size: 40px;
 }
 
 .images img {
@@ -75,9 +101,10 @@ hr {
 .top {
     width: 100%;
     position: relative;
+    left: 12%;
 }
 
-.form {
+.form-signup {
     width: 80%;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -114,6 +141,35 @@ hr {
     width: 80%;
 }
 
+.accept {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(193, 174, 112);
+    position: relative;
+    width: 77%;
+}
+
+.accept input {
+    width: 15px;
+    height: 15px;
+    margin: 20px;   
+}
+
+.create {
+    width: 150px;
+    height: 40px;
+    font-family: "poppins";
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    right: -33%;
+
+}
+
 /* 800 width */
 @media only screen and (max-width:800px) {
     nav {
@@ -132,5 +188,153 @@ hr {
 
     nav .account {
         margin-left: 40px;
+    }
+}
+
+/* footer */
+
+footer {
+    border-top: 1px solid black;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer .logo {
+    margin-top: 80px;
+    transform: scaleX(-1);
+    height: 10vh;
+    object-fit: contain;
+}
+
+footer .links {
+    margin-left: 100px;
+}
+footer .links img {
+    width: 30px;
+    height: 30px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.footer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_head {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 100px;
+    row-gap: 100px;
+    line-height: 50px;
+}
+
+.footer mark {
+    background-color: transparent;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+}
+
+/* login */
+#cover {
+    text-align: center;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    background-color: antiquewhite;
+}
+
+.form .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.form input {
+    padding: 20px;
+    border: 1px solid black;
+    width: 350px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.form .options {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.form #remember {
+    width: 15px;
+    height: 15px;
+}
+
+.form #remember_label {
+    position: relative;
+    left: -11%;
+    top: -2px;
+}
+
+.form a {
+    text-decoration: none;
+    color: black;
+}
+
+.form .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 12px;
+}
+
+.form button {
+    width: 80px;
+    height: 30px;
+}
+
+.form img {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 25px;
+    height: 25px;
+
+    &:hover {
+        cursor: pointer;
     }
 }

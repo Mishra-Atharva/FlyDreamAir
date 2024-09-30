@@ -31,10 +31,23 @@ nav li {
     }
 }
 
+nav a {
+    text-decoration: none;
+    color: rgb(193, 174, 112);
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 nav img {
     height: 50px;
     object-fit: contain;
     scale: 1.5;
+
+    &:hover  {
+        cursor: pointer;
+    }
 }
 
 nav .account {

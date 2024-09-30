@@ -34,8 +34,7 @@ nav li {
 nav img {
     height: 50px;
     object-fit: contain;
-    scale: 2;
-    transform: scaleX(-1);
+    scale: 1.5;
 }
 
 nav .account {
@@ -207,7 +206,6 @@ footer {
 
 footer .logo {
     margin-top: 80px;
-    transform: scaleX(-1);
     height: 10vh;
     object-fit: contain;
 }

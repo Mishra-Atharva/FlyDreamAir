@@ -185,7 +185,7 @@ nav .account a {
 }
 
 .progress_bar {
-    background-color: lightgrey;
+    background-color: rgb(193, 174, 112);
     height: 24px;
     width: 20%;
 }

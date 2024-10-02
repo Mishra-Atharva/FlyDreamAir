@@ -1,0 +1,9 @@
+{
+    "name": "John Doe",
+    "birth": "2000-05-20",
+    "flynumber": "378912827913",
+    "status": "silver",
+    "email": "johndoe@gmail.com",
+    "password": "12345678",
+    "country": "Canada"
+}

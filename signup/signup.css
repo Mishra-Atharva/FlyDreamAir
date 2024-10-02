@@ -174,27 +174,10 @@ hr {
     position: relative;
     right: -33%;
 
-}
-
-/* 800 width */
-@media only screen and (max-width:800px) {
-    nav {
-        font-size: 12px;
-        padding: 20px;
+    &:hover {
+        cursor: pointer;
     }
 
-    nav li {
-        padding: 5px;
-    }
-
-    nav img {
-        height: 8vh;
-        object-fit: contain;
-    }
-
-    nav .account {
-        margin-left: 40px;
-    }
 }
 
 /* footer */

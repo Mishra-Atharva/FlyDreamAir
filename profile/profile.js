@@ -41,12 +41,12 @@ window.onload = function() {
 
         calculate();
 
-        document.getElementById("progress").style.background = "conic-gradient(rgb(193, 174, 112) 0% " + percent + "%, lightgray " + percent + "% 100%)";
+        var background = "conic-gradient(rgb(193, 174, 112) 0% " + percent + "%, lightgray " + percent + "% 100%)";
+        document.getElementById("progress").style.background = background;
         document.getElementById("miles_display").innerHTML = user["miles"];
-        document.getElementById("expire").innerHTML = "Expires - " +user["expires"]
+        document.getElementById("expire").innerHTML = "Expires - " +user["expires"];
 
         document.getElementById("booking_details").innerHTML = "You have no data to display.";
-        
 
     }
     else {
@@ -112,10 +112,6 @@ function login() {
             remember.checked = false;
             window.location.replace("profile_summary.html");
         }
-
-        // to see if info stored is there
-        var info = JSON.parse(localStorage.getItem("user"));
-        console.log(info);
     }
 }
 
@@ -129,6 +125,10 @@ function calculate()
     if (user['status'] == "silver")
     {
         percent = (parseInt(user["miles"]) / gold ) * 100;
-        console.log(percent);
+    }
+
+    if (user['status'] == "gold")
+    {
+        percent = (parseInt(user["miles"]) / 1000000) * 100;
     }
 }

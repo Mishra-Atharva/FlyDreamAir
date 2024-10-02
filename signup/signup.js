@@ -1,6 +1,6 @@
 var login_div = document.getElementById("cover");
-var email = document.getElementById("email");
-var password = document.getElementById("password");
+var email = document.getElementById("email_input");
+var password = document.getElementById("password_input");
 var remember = document.getElementById("remember");
 var details;
 var user;
@@ -21,7 +21,6 @@ document.getElementById("close").addEventListener("click", () => {
 
 window.onload = function() {
     document.body.style.visibility = 'visible';
-
     var logged = localStorage.getItem("logged in");
     console.log(logged);
     if (logged)
@@ -92,10 +91,6 @@ function login() {
             remember.checked = false;
             window.location.replace("../profile/profile_summary.html");
         }
-
-        // to see if info stored is there
-        var info = JSON.parse(localStorage.getItem("user"));
-        console.log(info);
     }
 }
 

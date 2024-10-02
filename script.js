@@ -91,14 +91,10 @@ function login() {
             remember.checked = false;
             window.location.replace("./profile/profile_summary.html");
         }
-
-        // to see if info stored is there
-        var info = JSON.parse(localStorage.getItem("user"));
-        console.log(info);
     }
 }
 
 function logout() {
     localStorage.clear();
-    window.location.replace("../index.html");
+    window.location.replace("index.html");
 }

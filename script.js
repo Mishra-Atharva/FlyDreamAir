@@ -40,7 +40,7 @@ window.onload = function() {
         };
 
         // Gets JSON file
-        xhttp.open("GET", "../user.json", true);
+        xhttp.open("GET", "user.json", true);
         xhttp.send();
     }
 };

@@ -1,0 +1,262 @@
+<html></html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="store.css">
+        <title>Shop</title>
+    </head>
+    <body>
+        <div id="cover">
+            <div class="form">
+                <img href="#" src="./Assets/close.svg" alt="" id="close">
+                <h1>LOGIN</h1>
+                <div class="inputs">
+                    <input type="text" id="email" placeholder="Fly High number / Email Address">
+                    <input type="password" id="password" placeholder="Password">
+                    <div class="options">
+                        <input type="checkbox" name="checkb" id="remember"> 
+                        <label for="checkb" id="remember_label">Remember me</label>
+                        <a href="">Reset Password</a>
+                    </div>
+                </div>
+                <button onclick="login();">Login</button>
+                <div class="buttons">
+                    <a href="">Forgot Memebership number</a>
+                    <p>Not a FlyHigh member? <a href="">Join now</a></p>
+                </div>
+            </div>
+        </div>
+        <header>
+            <nav>
+                <a href="../index.html"><img src="../Assets/logo.png" alt=""></a>
+                <ul>
+                    <li><a href="">PLAN TRAVEL</a></li>
+                    <li><a href="">FLYING WITH US</a></li>
+                    <li><a href="store.html">STORE</a></li>
+                    <li><a href="">FLY HIGH/FREQUENT FLIER</a></li>
+                    <li><a href="../profile/profile_summary.html">ACCOUNT</a></li>
+                </ul>
+                <div id="account">
+                    <a href="javascript:void(0);" onclick="login_show()">LOGIN</a> | <a href="../signup/signup.html">SIGN UP</a>
+                </div>
+                <div id="logout">
+                    <a href="javascript:void(0);" onclick="logout();">LOG OUT</a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+
+            <section class="flights">
+
+                <h1 id="title">Flights</h1>
+                <p id="details">Book flights to earn points</p>
+
+                <div class="hold">
+
+                    <div id="card">
+
+                        <div class="image">
+                            <img src="../Assets/location1.jpg" alt="">
+                        </div>
+        
+                        <div class="location">
+                            <p><strong>Sydney to Brisbane</strong></p>
+                            <p>Economy round from</p>
+                        </div>
+        
+                        <div class="details">
+                            <p id="left">AUD $300</p> <p id="right">+65000 PTS</p>
+                        </div>
+
+                        <button>Book</button>
+        
+                    </div>
+        
+                    <div id="card">
+        
+                        <div class="image">
+                            <img src="../Assets/location1.jpg" alt="">
+                        </div>
+        
+                        <div class="location">
+                            <p><strong>Sydney to Hobart</strong></p>
+                            <p>Economy round from</p>
+                        </div>
+        
+                        <div class="details">
+                            <p id="left">AUD $500</p> <p id="right">+105000 PTS</p>
+                        </div>
+        
+                        <button>Book</button>
+        
+                    </div>
+
+                    <div id="card">
+        
+                        <div class="image">
+                            <img src="../Assets/location5.jpg" alt="">
+                        </div>
+        
+                        <div class="location">
+                            <p><strong>Sydney to Adelaide</strong></p>
+                            <p>Economy round from</p>
+                        </div>
+        
+                        <div class="details">
+                            <p id="left">AUD $600</p> <p id="right">+12000 PTS</p>
+                        </div>
+        
+                        <button>Book</button>
+        
+                    </div>
+
+                </div>
+                
+                    
+            </section>
+
+            <section class="hotels">
+                <hr>
+                
+                <h1 id="title">Hotels</h1>
+                <p id="details">Book hotels to earn points</p>
+
+                <div class="hold">
+
+                    <div id="card">
+
+                        <div class="image">
+                            <img src="../Assets/location3.png" alt="">
+                        </div>
+        
+                        <div class="location">
+                            <p><strong>Spicer Sangoma Retreat</strong></p>
+                            <p>70 Grandview Ln, Bowen Mountain NSW 2753</p>
+                        </div>
+        
+                        <div class="details">
+                            <p id="left">AUD $2387</p> <p id="right">+55000 PTS</p>
+                        </div>
+
+                        <button>Book</button>
+        
+                    </div>
+        
+                    <div id="card">
+        
+                        <div class="image">
+                            <img src="../Assets/location4.jpg" alt="">
+                        </div>
+        
+                        <div class="location">
+                            <p><strong>InterContinental Hayman Great Barrier Reef</strong></p>
+                            <p>Hayman Island Whitsunday Islands, Hayman Island QLD 4802</p>
+                        </div>
+        
+                        <div class="details">
+                            <p id="left">AUD $831</p> <p id="right">+95000 PTS</p>
+                        </div>
+        
+                        <button>Book</button>
+        
+                    </div>
+
+                    <div id="card">
+        
+                        <div class="image">
+                            <img src="../Assets/location2.jpg" alt="">
+                        </div>
+        
+                        <div class="location">
+                            <p><strong>Amarna Luxury Beach Resort</strong></p>
+                            <p>16 Christmas Bush Ave, Nelson Bay NSW 2315</p>
+                        </div>
+        
+                        <div class="details">
+                            <p id="left">AUD $777</p> <p id="right">+10000 PTS</p>
+                        </div>
+        
+                        <button>Book</button>
+        
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="products">
+
+                <hr>
+                
+                <h1 id="title">Products</h1>
+                <p id="details">Buy products to earn points</p>
+
+                <div class="hold">
+
+                    <div id="card">
+
+                        <div class="image">
+                            <img src="../Assets/ipad.jpg" alt="">
+                        </div>
+        
+                        <div class="location">
+                            <p><strong>Ipad 10th Gen</strong></p>
+                            <p>Apple</p>
+                        </div>
+        
+                        <div class="details">
+                            <p id="left">AUD $300</p> <p id="right">+65000 PTS</p>
+                        </div>
+
+                        <button>Buy</button>
+        
+                    </div>
+        
+                    <div id="card">
+        
+                        <div class="image"">
+                            <img src="../Assets/airpods.jpg" alt="">
+                        </div>
+        
+                        <div class="location">
+                            <p><strong>Airpod 2nd Gen</strong></p>
+                            <p>Apple</p>
+                        </div>
+        
+                        <div class="details">
+                            <p id="left">AUD $500</p> <p id="right">+105000 PTS</p>
+                        </div>
+        
+                        <button>Buy</button>
+        
+                    </div>
+
+                    <div id="card">
+        
+                        <div class="image">
+                            <img src="../Assets/laptop.jpg" alt="">
+                        </div>
+        
+                        <div class="location">
+                            <p><strong>Macbook M3 2024</strong></p>
+                            <p>Apple</p>
+                        </div>
+        
+                        <div class="details">
+                            <p id="left">AUD $600</p> <p id="right">+12000 PTS</p>
+                        </div>
+        
+                        <button>Buy</button>
+        
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+        
+    </body>
+    <script src="store.js"></script>
+</html>

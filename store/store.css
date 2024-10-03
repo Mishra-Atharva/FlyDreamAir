@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+html, body {
+    overflow-x: hidden;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: "poppins";
+    font-weight: 300;
+
+    /* &::-webkit-scrollbar {
+        display: none;
+    } */
+}
+
+
+nav {
+    padding: 20px;
+    background-color: rgb(22, 22, 22);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    color: rgb(193, 174, 112);
+    display: inline;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &:hover {
+        cursor: pointer;
+        color: gray;
+    }
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(193, 174, 112);
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+nav img {
+    height: 50px;
+    object-fit: contain;
+    scale: 1.5;
+
+    &:hover  {
+        cursor: pointer;
+    }
+}
+
+nav #logout {
+    display: none;
+    color: rgb(193, 174, 112);
+    float: right;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    background: transparent;
+    margin-left: 20px;
+
+}
+
+nav #logout a {
+    text-decoration: none;
+    color: rgb(193, 174, 112);
+
+    &:hover {
+        cursor: pointer;
+        color: gray;
+    }
+}
+
+nav #account {
+    color: rgb(193, 174, 112);
+    float: right;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    background: transparent;
+    margin-left: 20px;
+}
+
+nav #account a {
+    text-decoration: none;
+    color: rgb(193, 174, 112);
+
+    &:hover {
+        cursor: pointer;
+        color: gray;
+    }
+}
+
+/* login */
+#cover {
+    text-align: center;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    background-color: antiquewhite;
+}
+
+.form .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.form input {
+    outline: none;
+    padding: 20px;
+    border: 1px solid black;
+    width: 350px;
+    height: 40px;
+    border-radius: 5px;
+
+    &:active {
+        color: black;
+    }
+}
+
+.form .options {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.form #remember {
+    width: 15px;
+    height: 15px;
+}
+
+.form #remember_label {
+    position: relative;
+    left: -11%;
+    top: -2px;
+}
+
+.form a {
+    text-decoration: none;
+    color: black;
+}
+
+.form .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 12px;
+}
+
+.form button {
+    width: 80px;
+    height: 30px;
+}
+
+.form img {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 25px;
+    height: 25px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.container {
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.flights {
+    margin-top: 5%;
+    font-family: "poppins";
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    padding: 20px;
+}
+
+#title {
+    font-size: 40px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+#details {
+    margin-bottom: 100;
+    padding: 0;
+}
+
+
+.hold {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+#card {
+    overflow: hidden;
+    display: grid;
+    gap: 5px;
+    text-align: center;
+    background-color: rgb(193, 174, 112);
+    border-radius: 10px;
+    width: 20rem;
+    height: 30rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#card img {
+    width: 100%;
+    object-fit: fill;
+}
+
+#card .image {
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+}
+
+.location {
+    padding: 0px 20px 0px 20px;
+    width: 90%;
+    display: grid;
+    text-align: center;
+}
+
+.location p {
+    margin: 0;
+    padding: 0;
+}
+
+.details {
+    margin: 0px 20px 0px 20px;
+}
+
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
+}
+
+#card button {
+    border-radius: 10px;
+    cursor: pointer;
+    border: 10px;
+    height: 30px;
+    width: 100px;
+    margin-right: 20px;
+    position: relative;
+    right: -65%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.hotels {
+    margin-top: 5%;
+    font-family: "poppins";
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    padding: 20px;
+}
+
+.products {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-family: "poppins";
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    padding: 20px;
+}
+
+hr {
+    width: 100%;
+    background-color: black;
+}

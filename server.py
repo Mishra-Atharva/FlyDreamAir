@@ -13,10 +13,16 @@ def get_data():
 
 @app.route('/update_data', methods=['POST'])
 def update_data():
-    data = request.get_json()
-    with open('user.json', 'w') as f:
-        json.dump(data, f, indent=2)
-    print("Updated")
+    if request.method == 'POST':
+        content_type = request.headers.get('Content-Type')
+        if content_type == 'application/json':
+            data = request.json
+            with open("user.json", 'w') as f:
+                json.dump(data, f)
+            return jsonify({"message": "Data written to file successfully"}), 200
+        else:
+            return jsonify({"error": "Content-Type must be application/json"}), 400
+    return jsonify({"error": "Invalid request method"}), 405
 
 if __name__ == '__main__':
     app.run(debug=True)

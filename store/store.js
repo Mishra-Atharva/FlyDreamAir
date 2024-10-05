@@ -201,18 +201,11 @@ function updatefile() {
     // NEW
     var server = new XMLHttpRequest();
     server.open("POST", "http://127.0.0.1:5000/update_data", true);
-    server.setRequestHeader("Content-Type", "application/json");  // Set the content type to JSON
-
-    server.onreadystatechange = function () {
-        if (server.readyState === XMLHttpRequest.DONE) {
-            if (server.status === 200) {
-                console.log("Updated");
-                console.log(JSON.parse(server.responseText)); // Log response if needed
-            } else {
-                console.error("Error updating data:", server.status, server.statusText);
-            }
+    server.setRequestHeader("Content-Type", "application/json");
+    server.onload = function() {
+        if (server.status === 200) {
+            console.log("Data updated successfully!");
         }
     };
-    
-    server.send(JSON.stringify(jsonData));
+    server.send(jsonData);
 }

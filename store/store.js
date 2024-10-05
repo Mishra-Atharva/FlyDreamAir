@@ -22,11 +22,11 @@ document.getElementById("close").addEventListener("click", () => {
 window.onload = function() {
     document.body.style.visibility = 'visible';
     var logged = localStorage.getItem("logged in");
-    console.log(logged);
     if (logged)
     {
         document.getElementById("account").style.display = "none";
         document.getElementById("logout").style.display = "flex";
+        document.getElementById("cart").style.display = "inline";
     }
     else {
         // creates an XMLHttpRequest
@@ -63,7 +63,6 @@ function handleStatusFailure(xhttp) {
 
 // If success
 function handleStatusSuccess(xhttp) {
-    console.log("Details are loaded!");
     var jsonText = xhttp.responseText;
     
     details = JSON.parse(jsonText);

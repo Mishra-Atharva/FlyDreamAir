@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+html, body {
+    overflow-x: hidden;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: "poppins";
+    font-weight: 300;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+
+nav {
+    padding: 20px;
+    background-color: rgb(22, 22, 22);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    color: rgb(193, 174, 112);
+    display: inline;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &:hover {
+        cursor: pointer;
+        color: gray;
+    }
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(193, 174, 112);
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+nav img {
+    height: 50px;
+    object-fit: contain;
+    scale: 1.5;
+
+    &:hover  {
+        cursor: pointer;
+    }
+}
+
+nav #logout {
+    display: none;
+    color: rgb(193, 174, 112);
+    float: right;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    background: transparent;
+    margin-left: 20px;
+
+}
+
+nav #logout a {
+    text-decoration: none;
+    color: rgb(193, 174, 112);
+
+    &:hover {
+        cursor: pointer;
+        color: gray;
+    }
+}
+
+nav #account {
+    color: rgb(193, 174, 112);
+    float: right;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    background: transparent;
+    margin-left: 20px;
+}
+
+nav #account a {
+    text-decoration: none;
+    color: rgb(193, 174, 112);
+
+    &:hover {
+        cursor: pointer;
+        color: gray;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.details {
+    overflow-x: hidden;
+    margin: 10%;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    align-items: center;
+    border-radius: 15px;
+    width: 80vw;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+hr {
+    margin: 20px 0 20px 0;
+    width: 100%;
+}
+
+.title {
+    font-family: "poppins";
+    font-size: 40px;
+}
+
+
+.page {
+    margin: 5%;
+    width: 1fr;
+}
+
+.page p {
+    font-family: "poppins";
+    font-weight: 500;
+}
+
+.page button {
+    font-family: "poppins";
+}
+
+.item {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    margin: 20px;
+}
+
+.item input {
+    font-family: "poppins";
+    outline: none;
+}
+
+#product {
+    width: 150px;
+}
+
+.price {
+    width: 100px;
+}
+
+.item img {
+    height: 150px;
+    width: 150px;
+    object-fit: contain;
+}
+
+.page button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.hold {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 1fr;
+    height: 100%;
+    background-color: lightgray;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px 0 20px 0;
+}
+
+.summary select {
+    text-align: center;
+    border: none;
+    font-family: "poppins";
+    margin: 20px;
+    outline: none;
+    padding: 10px;
+    width: 250px;
+    height: 50px;
+}
+
+.summary input {
+    text-align: center;
+    border: none;
+    width: 250px;
+    height: 50px;
+    font-family: "poppins";
+    margin: 20px;
+    outline: none;
+    padding: 10px;
+}
+
+#left, #count {
+    font-family: "poppins";
+    font-weight: 800;
+    font-size: 18px;
+    float: left;
+}
+
+#right, #total_price {
+    font-family: "poppins";
+    font-weight: 800;
+    font-size: 18px;
+    float: right;
+}
+
+.ship {
+    text-align: center;
+    width: 100%;
+}
+
+.code {
+    text-align: center;
+    width: 100%;
+}
+
+.summary button {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background-color: rgb(22, 22, 22);
+    color: white;
+    border: none;
+    width: 350px;
+    height: 60px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

@@ -2,13 +2,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FlyHigh - Store</title>
+        <link rel="shortcut icon" href="../Assets/store.svg" type="image/svg+xml">
         <link rel="stylesheet" href="store.css">
-        <title>Shop</title>
     </head>
     <body>
         <div id="cover">
             <div class="form">
-                <img href="#" src="./Assets/close.svg" alt="" id="close">
+                <img href="#" src="../Assets/close.svg" alt="" id="close">
                 <h1>LOGIN</h1>
                 <div class="inputs">
                     <input type="text" id="email" placeholder="Fly High number / Email Address">
@@ -42,6 +43,10 @@
                 <div id="logout">
                     <a href="javascript:void(0);" onclick="logout();">LOG OUT</a>
                 </div>
+
+                <div id="cart">
+                    <a href="../cart/cart.html"><img class="cart" src="../Assets/cart.svg" alt=""></a>
+                </div>
             </nav>
         </header>
 
@@ -54,10 +59,10 @@
 
                 <div class="hold">
 
-                    <div id="card">
+                    <div id="card" data-destination="Sydney to Brisbane" data-price="AUD $300" data-points="+65000 PTS" data-quantity="1" data-image="../Assets/location6.jpg">
 
                         <div class="image">
-                            <img src="../Assets/location1.jpg" alt="">
+                            <img src="../Assets/location6.jpg" alt="">
                         </div>
         
                         <div class="location">
@@ -69,11 +74,11 @@
                             <p id="left">AUD $300</p> <p id="right">+65000 PTS</p>
                         </div>
 
-                        <button>Book</button>
+                        <button class="flight_btn">Book</button>
         
                     </div>
         
-                    <div id="card">
+                    <div id="card" data-destination="Sydney to Hobart" data-price="AUD $500" data-points="+105000 PTS" data-quantity="1" data-image="../Assets/location1.jpg">
         
                         <div class="image">
                             <img src="../Assets/location1.jpg" alt="">
@@ -88,11 +93,11 @@
                             <p id="left">AUD $500</p> <p id="right">+105000 PTS</p>
                         </div>
         
-                        <button>Book</button>
+                        <button class="flight_btn">Book</button>
         
                     </div>
 
-                    <div id="card">
+                    <div id="card" data-destination="Sydney to Adelaide" data-price="AUD $600" data-points="+12000 PTS" data-quantity="1" data-image="../Assets/location5.jpg">
         
                         <div class="image">
                             <img src="../Assets/location5.jpg" alt="">
@@ -107,7 +112,7 @@
                             <p id="left">AUD $600</p> <p id="right">+12000 PTS</p>
                         </div>
         
-                        <button>Book</button>
+                        <button class="flight_btn">Book</button>
         
                     </div>
 
@@ -124,7 +129,7 @@
 
                 <div class="hold">
 
-                    <div id="card">
+                    <div id="card" data-destination="Spicer Sangoma" data-price="AUD $2387" data-points="+55000 PTS" data-quantity="1" data-image="../Assets/location3.jpg">
 
                         <div class="image">
                             <img src="../Assets/location3.png" alt="">
@@ -139,11 +144,11 @@
                             <p id="left">AUD $2387</p> <p id="right">+55000 PTS</p>
                         </div>
 
-                        <button>Book</button>
+                        <button class="hotel_btn">Book</button>
         
                     </div>
         
-                    <div id="card">
+                    <div id="card" data-destination="InterContinental Hayman Great Barrier Reef" data-price="AUD $831" data-points="+95000 PTS" data-quantity="1" data-image="../Assets/location4.jpg">
         
                         <div class="image">
                             <img src="../Assets/location4.jpg" alt="">
@@ -158,11 +163,11 @@
                             <p id="left">AUD $831</p> <p id="right">+95000 PTS</p>
                         </div>
         
-                        <button>Book</button>
+                        <button class="hotel_btn">Book</button>
         
                     </div>
 
-                    <div id="card">
+                    <div id="card" data-destination="Amarna Luxury Beach Resort" data-price="AUD $777" data-points="+10000 PTS" data-quantity="1" data-image="../Assets/location2.jpg">
         
                         <div class="image">
                             <img src="../Assets/location2.jpg" alt="">
@@ -177,7 +182,7 @@
                             <p id="left">AUD $777</p> <p id="right">+10000 PTS</p>
                         </div>
         
-                        <button>Book</button>
+                        <button class="hotel_btn">Book</button>
         
                     </div>
 
@@ -194,7 +199,7 @@
 
                 <div class="hold">
 
-                    <div id="card">
+                    <div id="card" data-product="Ipad 10th Gen" data-price="AUD $1500" data-points="+15500 PTS" data-quantity="1" data-image="../Assets/ipad.jpg">
 
                         <div class="image">
                             <img src="../Assets/ipad.jpg" alt="">
@@ -206,33 +211,33 @@
                         </div>
         
                         <div class="details">
-                            <p id="left">AUD $300</p> <p id="right">+65000 PTS</p>
+                            <p id="left">AUD $1500</p> <p id="right">+15500 PTS</p>
                         </div>
 
-                        <button>Buy</button>
+                        <button class="product_btn">Buy</button>
         
                     </div>
         
-                    <div id="card">
+                    <div id="card" data-product="Airpods 2nd Gen" data-price="AUD $250" data-points="+2500 PTS" data-quantity="1" data-image="../Assets/airpods.jpg">
         
                         <div class="image"">
                             <img src="../Assets/airpods.jpg" alt="">
                         </div>
         
                         <div class="location">
-                            <p><strong>Airpod 2nd Gen</strong></p>
+                            <p><strong>Airpods 2nd Gen</strong></p>
                             <p>Apple</p>
                         </div>
         
                         <div class="details">
-                            <p id="left">AUD $500</p> <p id="right">+105000 PTS</p>
+                            <p id="left">AUD $250</p> <p id="right">+2500 PTS</p>
                         </div>
         
-                        <button>Buy</button>
+                        <button class="product_btn">Buy</button>
         
                     </div>
 
-                    <div id="card">
+                    <div id="card" data-product="Macbook M3 2024" data-price="AUD $2000" data-points="+20000 PTS" data-quantity="1" data-image="../Assets/laptop.jpg">
         
                         <div class="image">
                             <img src="../Assets/laptop.jpg" alt="">
@@ -244,10 +249,10 @@
                         </div>
         
                         <div class="details">
-                            <p id="left">AUD $600</p> <p id="right">+12000 PTS</p>
+                            <p id="left">AUD $2000</p> <p id="right">+20000 PTS</p>
                         </div>
         
-                        <button>Buy</button>
+                        <button class="product_btn">Buy</button>
         
                     </div>
 
@@ -259,4 +264,5 @@
         
     </body>
     <script src="store.js"></script>
+    <script src="buy.js"flight_btn".js"></script>
 </html>

@@ -199,19 +199,20 @@ function updatefile() {
     var jsonData = JSON.stringify(details, null, 2);
     
     // NEW
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "../file.ps1", true);  // Call the PowerShell script locally
-    xhr.setRequestHeader("Content-Type", "application/json");
+    var server = new XMLHttpRequest();
+    server.open("POST", "http://127.0.0.1:5000/update_data", true);
+    server.setRequestHeader("Content-Type", "application/json");  // Set the content type to JSON
 
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState == XMLHttpRequest.DONE) {
-            if (xhr.status != 200) {
-                console.log("ERROR: " + xhr.status);
+    server.onreadystatechange = function () {
+        if (server.readyState === XMLHttpRequest.DONE) {
+            if (server.status === 200) {
+                console.log("Updated");
+                console.log(JSON.parse(server.responseText)); // Log response if needed
             } else {
-                console.log("JSON updated successfully with PowerShell magic! 😏");
+                console.error("Error updating data:", server.status, server.statusText);
             }
         }
     };
-
-    xhr.send(jsonData);
+    
+    server.send(JSON.stringify(jsonData));
 }

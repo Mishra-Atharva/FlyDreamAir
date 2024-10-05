@@ -9,20 +9,7 @@
         "email": "johndoe@gmail.com",
         "password": "12345678",
         "country": "Canada",
-        "cart": [
-            {
-                "item": "Ipad 10th Gen",
-                "quantity": "2",
-                "price": "1500",
-                "image": "../Assets/ipad.jpg"
-            },
-            {
-                "item": "Macbook M3 2024",
-                "quantity": "1",
-                "price": "2500",
-                "image": "../Assets/laptop.jpg"
-            }
-        ],
+        "cart": [],
         "purchased": []
     }
 ]

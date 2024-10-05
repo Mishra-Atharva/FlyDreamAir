@@ -25,7 +25,6 @@ document.getElementById("close").addEventListener("click", () => {
 window.onload = function() {
     document.body.style.visibility = 'visible';
     var logged = localStorage.getItem("logged in");
-    console.log(logged);
     if (logged)
     {
         user = JSON.parse(localStorage.getItem("user"));

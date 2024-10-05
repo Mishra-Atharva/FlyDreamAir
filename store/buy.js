@@ -2,7 +2,6 @@ const flight_buttons = document.querySelectorAll(".flight_btn");
 const hotel_buttons = document.querySelectorAll(".hotel_btn");
 const product_buttons = document.querySelectorAll(".product_btn");
 var cart = [];
-const fs = require("fs");
 
 flight_buttons.forEach(button => {
     button.addEventListener("click", (event) => {
@@ -71,13 +70,10 @@ product_buttons.forEach(button => {
                 "points": points,
                 "image": image
             });
-            updatefile();
         }
     });
 });
 
 function updatefile() {
-
-    fs.writeFile("../cart.json", cart);
+    console.log(details);
 }
-

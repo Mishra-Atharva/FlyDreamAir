@@ -234,6 +234,9 @@ nav #account a {
 }
 
 .booking {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border: 1px solid black;
@@ -241,6 +244,27 @@ nav #account a {
     padding: 20px;
     height: 20rem;
     width: 65rem;
+}
+
+.screen {
+    overflow-x: scroll;
+    width: 80%;
+    display: flex;
+    gap: 5%;
+}
+
+.screen img {
+    height: 250px;
+    width: 250px;
+    object-fit: contain;
+}
+
+.card {
+    background-color: white;
+    text-align: center;
+    width: 250px;
+    display: grid;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 .rewards {

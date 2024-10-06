@@ -22,51 +22,24 @@ document.getElementById("close").addEventListener("click", () => {
 window.onload = function() {
     document.body.style.visibility = 'visible';
     var logged = localStorage.getItem("logged in");
-    console.log(logged);
     if (logged)
     {
         document.getElementById("account").style.display = "none";
         document.getElementById("logout").style.display = "flex";
     }
-    else {
-        // creates an XMLHttpRequest
-        var xhttp = new XMLHttpRequest();
-
-        // creates an handler for the readyState change
-        xhttp.onreadystatechange = function () {
-
-            // Calling readSateChangeHandler function
-            readyStateChangeHandler(xhttp);
-        };
-
-        // Gets JSON file
-        xhttp.open("GET", "user.json", true);
-        xhttp.send();
-    }
+    get_data();
 };
 
-function readyStateChangeHandler(xhttp) {
-    // Checks if the status is success or failure
-    if (xhttp.readyState == 4) {
-        if (xhttp.status == 200) {
-            handleStatusSuccess(xhttp);
-        } else {
-            handleStatusFailure(xhttp);
+function get_data() {
+    var server = new XMLHttpRequest();
+
+    server.open("GET", "/get_data", true);
+    server.onload = function() {
+        if (server.status == 200) {
+            details = JSON.parse(server.responseText);
         }
     }
-}
-
-// If failure display error
-function handleStatusFailure(xhttp) {
-    console.log("XMLHttpRequest failed: status " + xhttp.status);
-}
-
-// If success
-function handleStatusSuccess(xhttp) {
-    console.log("Details are loaded!");
-    var jsonText = xhttp.responseText;
-    
-    details = JSON.parse(jsonText);
+    server.send();
 }
 
 function login() {
@@ -89,12 +62,12 @@ function login() {
             email.value = "";
             password.value = "";
             remember.checked = false;
-            window.location.replace("./profile/profile_summary.html");
+            window.location.replace("/account_summary");
         }
     }
 }
 
 function logout() {
     localStorage.clear();
-    window.location.replace("index.html");
+    window.location.replace("/");
 }

@@ -3,13 +3,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlyHigh - Sign up</title>
-    <link rel="stylesheet" href="signup.css">
-    <link rel="shortcut icon" href="../Assets/account.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../static/css/signup.css">
+    <link rel="shortcut icon" href="../static/Assets/account.svg" type="image/svg+xml">
 </head>
 <body>
     <div id="cover">
         <div class="form">
-            <a href="../index.html"><img src="../Assets/close.svg" alt="" id="close"> </a>
+            <a href=""><img src="../static/Assets/close.svg" alt="" id="close"> </a>
             <h1>LOGIN</h1>
             <div class="inputs">
                 <input type="text" id="email_input" placeholder="Fly High number / Email Address">
@@ -29,16 +29,16 @@
     </div>
     <header>
         <nav>
-            <a href="../index.html"><img src="../Assets/logo.png" alt=""></a>
+            <a href="{{url_for('home')}}"><img src="../static/Assets/logo.png" alt=""></a>
             <ul>
                 <li><a href="">PLAN TRAVEL</a></li>
                 <li><a href="">FLYING WITH US</a></li>
-                <li><a href="../store/store.html">STORE</a></li>
+                <li><a href="{{url_for('store')}}">STORE</a></li>
                 <li><a href="">FLY HIGH/FREQUENT FLIER</a></li>
-                <li><a href="../profile/profile_summary.html">ACCOUNT</a></li>
+                <li><a href="{{url_for('account_summary')}}">ACCOUNT</a></li>
             </ul>
             <div id="account">
-                <a href="javascript:void(0);" onclick="login_show()">LOGIN</a> | <a href="./signup.html">SIGN UP</a>
+                <a href="javascript:void(0);" onclick="login_show()">LOGIN</a> | <a href="{{url_for('signup')}}">SIGN UP</a>
             </div>
             <div id="logout">
                 <a href="javascript:void(0);" onclick="logout();">LOG OUT</a>
@@ -180,14 +180,14 @@
             </div>
             <br>
             <footer>
-                <img class="logo" src="../Assets/logo.png" alt=""><br>
+                <img class="logo" src="../static/Assets/logo.png" alt=""><br>
                 <div class="info"><p><a href="">Privacy policy</a> | <a href="">Cookie policy</a> | <a href="">Terms & Conditions</a> | <a href="">Keep your data safe</a> | <a href="">Report Vulnerability</a></p></div>
                 <br><div class="info2"><p>Hyperlinks with this icon are links to third-party websites. Use of such websites is subject to their terms and conditions.</p></div>
                 <div class="links">
-                    <img src="../Assets/linkedin.png" alt="">
-                    <img src="../Assets/twitter.png" alt="">
-                    <img src="../Assets/youtube.svg" alt="">
-                    <img src="../Assets/instagram.png" alt="">
+                    <img src="../static/Assets/linkedin.png" alt="">
+                    <img src="../static/Assets/twitter.png" alt="">
+                    <img src="../static/Assets/youtube.svg" alt="">
+                    <img src="../static/Assets/instagram.png" alt="">
                 </div>
 
             </footer>
@@ -195,5 +195,5 @@
     </div>
     
 </body>
-<script src="signup.js"></script>
+<script src="../static/javascript/signup.js"></script>
 </html>

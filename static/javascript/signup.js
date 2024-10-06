@@ -89,12 +89,12 @@ function login() {
             email.value = "";
             password.value = "";
             remember.checked = false;
-            window.location.replace("../profile/profile_summary.html");
+            window.location.replace("/account_summary");
         }
     }
 }
 
 function logout() {
     localStorage.clear();
-    window.location.replace("../index.html");
+    window.location.replace("/");
 }

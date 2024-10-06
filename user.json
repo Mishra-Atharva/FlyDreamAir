@@ -1,15 +1,15 @@
 [
   {
-      "name": "John Doe",
-      "birth": "2000-05-20",
-      "flynumber": "378912827913",
-      "miles": "150000",
-      "expires": "18/01/2025",
-      "status": "silver",
-      "email": "johndoe@gmail.com",
-      "password": "12345678",
-      "country": "Canada",
-      "cart": [],
-      "purchased": []
+    "birth": "2000-05-20",
+    "cart": [],
+    "country": "Canada",
+    "email": "johndoe@gmail.com",
+    "expires": "18/01/2025",
+    "flynumber": "378912827913",
+    "miles": "110000",
+    "name": "John Doe",
+    "password": "12345678",
+    "purchased": [],
+    "status": "silver"
   }
 ]

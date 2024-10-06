@@ -21,6 +21,7 @@ document.getElementById("close").addEventListener("click", () => {
 
 window.onload = function() {
     document.body.style.visibility = 'visible';
+    get_data();
     var logged = localStorage.getItem("logged in");
     if (logged)
     {
@@ -28,43 +29,29 @@ window.onload = function() {
         document.getElementById("logout").style.display = "flex";
         document.getElementById("cart").style.display = "inline";
     } 
-
-    // creates an XMLHttpRequest
-    var xhttp = new XMLHttpRequest();
-
-    // creates an handler for the readyState change
-    xhttp.onreadystatechange = function () {
-
-        // Calling readSateChangeHandler function
-        readyStateChangeHandler(xhttp);
-    };
-
-    // Gets JSON file
-    xhttp.open("GET", "../user.json", true);
-    xhttp.send();
 };
 
-function readyStateChangeHandler(xhttp) {
-    // Checks if the status is success or failure
-    if (xhttp.readyState == 4) {
-        if (xhttp.status == 200) {
-            handleStatusSuccess(xhttp);
-        } else {
-            handleStatusFailure(xhttp);
+function get_data() {
+    var server = new XMLHttpRequest();
+
+    server.open("GET", "/get_data", true);
+    server.onload = function() {
+        if (server.status == 200) {
+            details = JSON.parse(server.responseText);
+            let logged = localStorage.getItem("logged in");
+            if (logged == 'true') {
+                user = JSON.parse(localStorage.getItem("user"));
+                for (var i = 0; i < details.length; ++i) {
+                    if (details[i]["email"] == user["email"]) {
+                        localStorage.clear();
+                        localStorage.setItem("logged in", true);
+                        localStorage.setItem("user", JSON.stringify(details[i]));
+                    }
+                }
+            }
         }
     }
-}
-
-// If failure display error
-function handleStatusFailure(xhttp) {
-    console.log("XMLHttpRequest failed: status " + xhttp.status);
-}
-
-// If success
-function handleStatusSuccess(xhttp) {
-    var jsonText = xhttp.responseText;
-    
-    details = JSON.parse(jsonText);
+    server.send();
 }
 
 function login() {
@@ -87,14 +74,14 @@ function login() {
             email.value = "";
             password.value = "";
             remember.checked = false;
-            window.location.replace("store.html");
+            window.location.replace("/store");
         }
     }
 }
 
 function logout() {
     localStorage.clear();
-    window.location.replace("../index.html");
+    window.location.replace("/");
 }
 
 
@@ -186,7 +173,7 @@ product_buttons.forEach(button => {
 });
 
 function updatefile() {
-    var name = JSON.parse(localStorage.getItem("user"));
+    let name = JSON.parse(localStorage.getItem("user"));
     name = name["name"];
     
     for (var i = 0; i < details.length; ++i) {
@@ -200,7 +187,7 @@ function updatefile() {
     
     // NEW
     var server = new XMLHttpRequest();
-    server.open("POST", "http://127.0.0.1:5000/update_data", true);
+    server.open("POST", "/update_data", true);
     server.setRequestHeader("Content-Type", "application/json");
     server.onload = function() {
         if (server.status === 200) {

@@ -145,7 +145,7 @@ hr {
     text-align: center;
     display: flex;
     align-items: center;
-    gap: 10%;
+    gap: 5%;
     margin: 20px;
 }
 
@@ -192,6 +192,8 @@ hr {
 .summary {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    
     width: 80%;
     margin: 20px 0 20px 0;
 }
@@ -248,7 +250,7 @@ hr {
     background-color: rgb(22, 22, 22);
     color: white;
     border: none;
-    width: 350px;
+    width: 70%;
     height: 60px;
 
     &:hover {

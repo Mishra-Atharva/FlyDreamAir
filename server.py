@@ -1,6 +1,27 @@
-from flask import Flask, jsonify, request, render_template
-from flask_cors import CORS
-import json 
+import subprocess
+import sys
+
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip3", "install", package])
+
+# Try importing libraries and installing them if not found
+try:
+    from flask import Flask, jsonify, request, render_template
+except ImportError:
+    print("Flask is not installed. Installing Flask...")
+    install("Flask")
+
+try:
+    from flask_cors import CORS
+except ImportError:
+    print("flask_cors is not installed. Installing flask_cors...")
+    install("flask-cors")
+
+try:
+    import json  # json is part of Python's standard library, so this should not raise an ImportError
+except ImportError:
+    print("There is an issue with the json module. It is part of Python's standard library.")
+
 
 app = Flask(__name__)
 CORS(app)

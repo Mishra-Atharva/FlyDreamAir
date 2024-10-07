@@ -1,2 +1,7 @@
-# FlyDreamAir.github.io
-This is a website that manages the loyalty program of FlyDream Air.
+# FlyDreamAir
+
+## Setup 
+
+-  Run the server.py `python3 server.py`
+
+

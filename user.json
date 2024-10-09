@@ -26,16 +26,35 @@
     "status": "silver"
   },
   {
-    "name": "Alex Johnson",
-    "birth": "15/10/1989",
     "address": "221B Baker Street London, NW1 6XE, United Kingdom",
-    "email": "alexjohnson@gmail.com",
-    "password": "Alex1979!",
-    "flynumber": 59421099394,
-    "status": "silver",
-    "miles": 0,
-    "expires": "1/01/2025",
+    "birth": "15/10/1989",
     "cart": [],
-    "purchased": []
+    "email": "alexjohnson@gmail.com",
+    "expires": "1/01/2025",
+    "flynumber": 59421099394,
+    "miles": 0,
+    "name": "Alex Johnson",
+    "password": "Alex1979!",
+    "purchased": [],
+    "status": "silver"
+  },
+  {
+    "address": "UNIT 10, 59 Oxford Street, Epping NSW, 2121",
+    "birth": "16/02/2005",
+    "cart": [],
+    "email": "atharvamishra3@gmail.com",
+    "expires": "1/01/2025",
+    "flynumber": 16831135096,
+    "gender": "No-data",
+    "miles": 0,
+    "name": "Atharva Mishra",
+    "nationality": "No-data",
+    "passport_expire": "No-data",
+    "passport_number": "No-data",
+    "password": "Atharva16205!",
+    "phone_number": "No-data",
+    "place_of_issue": "No-data",
+    "purchased": [],
+    "status": "silver"
   }
 ]

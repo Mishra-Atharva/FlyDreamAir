@@ -1,0 +1,226 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlyHigh - Account</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/details.css">
+    <link rel="shortcut icon" href="../static/Assets/account.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <div id="cover">
+        <div class="form">
+            <img href="" src="../static/Assets/close.svg" alt="" id="close">
+            <h1>LOGIN</h1>
+            <div class="inputs">
+                <input type="text" id="email" placeholder="Fly High number / Email Address">
+                <input type="password" id="password" placeholder="Password">
+                <div class="options">
+                    <input type="checkbox" name="checkb" id="remember"> 
+                    <label for="checkb" id="remember_label">Remember me</label>
+                    <a href="">Reset Password</a>
+                </div>
+            </div>
+            <button onclick="login();">Login</button>
+            <div class="buttons">
+                <a href="">Forgot Memebership number</a>
+                <p>Not a FlyHigh member? <a href="">Join now</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="blind">
+        <div class="edit_personal">
+            <div class="contain_personal">
+                <button class="close_personal" onclick="closePersonal();"><img src="../static/Assets/close.svg" alt=""></button>
+                <div class="first_name">
+                    <label for="full_name">Full Name</label><br>
+                    <input type="text" name="full_name" id="full_name" placeholder="">
+                </div>
+                <br>
+                <div class="dob">
+                    <label for="dob">Date of birth</label><br>
+                    <input type="text" name="dob" id="birth" placeholder="">
+                </div>
+                <br>
+                <div class="nationality">
+                    <label for="nation">Nationality</label><br>
+                    <input type="text" name="nation" id="nation" placeholder="">
+                </div>
+                <br>
+                <div class="gender">
+                    <label for="gender">Gender</label><br>
+                    <select name="gender" id="user_gender">
+                        <option value="N" disabled selected>Select a gender</option>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select>
+                </div>
+                <br>
+                <button class="save">Save</button>
+            </div>
+        </div>
+
+        <div class="edit_passport">
+            <div class="contain_passport">
+                <button class="close_passport" onclick="closePassport();"><img src="../static/Assets/close.svg" alt=""></button>
+                <div class="passport_number">
+                    <label for="pass_num">Passport Number</label><br>
+                    <input type="text" name="pass_num" id="pass_num" placeholder="">
+                </div>
+                <br>
+                <div class="passport_issue">
+                    <label for="issue">Place of Issue</label><br>
+                    <input type="text" name="issue" id="issue" placeholder="">
+                </div>
+                <br>
+                <div class="expire">
+                    <label for="expire">Expiry Date</label><br>
+                    <input type="text" name="expire" id="expire" placeholder="">
+                </div>
+                <br>
+                <button class="save">Save</button>
+            </div>
+        </div>
+        
+        <div class="edit_contact">
+            <div class="contain_contact">
+                <button class="close_passport" onclick="closeContact();"><img src="../static/Assets/close.svg" alt=""></button>
+                <div class="email">
+                    <label for="email">Email Address</label><br>
+                    <input type="text" name="email" id="email_address" placeholder="">
+                </div>
+                <br>
+                <div class="phone_number">
+                    <label for="phone">Phone Number</label><br>
+                    <input type="text" name="phone" id="phone" placeholder="">
+                </div>
+                <br>
+                <div class="address">
+                    <label for="address">Address</label><br>
+                    <input type="text" name="address" id="home_address" placeholder="">
+                </div>
+                <br>
+                <button class="save">Save</button>
+            </div>
+        </div>
+    </div>
+    <header>
+        <nav>
+            <a href="{{url_for('home')}}"><img src="../static/Assets/logo.png" alt=""></a>
+            <ul>
+                <li><a href="">PLAN TRAVEL</a></li>
+                <li><a href="">FLYING WITH US</a></li>
+                <li><a href="{{url_for('store')}}">STORE</a></li>
+                <li><a href="{{url_for('faq')}}">FAQ</a></li>
+                <li><a href="{{url_for('account_summary')}}">ACCOUNT</a></li>
+            </ul>
+            <div id="account">
+                <a href="javascript:void(0);" onclick="login_show()">LOGIN</a> | <a href="{{url_for('signup')}}">SIGN UP</a>
+            </div>
+            <div id="logout">
+                <a href="javascript:void(0);" onclick="logout();">LOG OUT</a>
+            </div>
+        </nav>
+    </header>
+    <section class="sections">
+        <div class="info_mile">
+            <p id="flynumber">FlyHigh 000000000000</p>
+            <h1 id="miles">0 Flyer Miles</h1>
+        </div>
+        <br>
+        <div class="section_links">
+            <ul>
+                <li><a href="{{url_for('account_summary')}}">Account Summary</a></li>
+                <li><a href="javascript:void(0);">Personal Details</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="container">
+
+        <section class="display">
+
+            <div id="display">
+                <h1>Personal Details</h1>
+                <button onclick="updatePersonal();">Edit <img src="../static/Assets/edit.svg" alt=""></button>
+            </div>
+            <div id="details">
+                <h3>Full Name</h3>
+                <p id="name">Full Name</p>
+                <h3>Date of Birth</h3>
+                <p id="dob">Date of Birth</p>
+                <h3>Nationality</h3>
+                <p id="nationality">Nationality</p>
+                <h3>Gender</h3>
+                <p id="gender">Gender</p>
+            </div>
+            <hr>
+            <div id="display">
+                <h1>Passport Details</h1>
+                <button onclick="updatePassport();">Edit <img src="../static/Assets/edit.svg" alt=""></button>
+            </div>
+            <div id="details">
+                <h3>Passport Number</h3>
+                <p id="passport_number">Passport Number</p>
+                <h3>Place of Issue</h3>
+                <p id="passport_issue">Place of Issue</p>
+                <h3>Expiry Date</h3>
+                <p id="passport_expire">Expiry Date</p>
+            </div>
+            <hr>
+            <div id="display">
+                <h1>Contact Details</h1>
+                <button onclick="updateContact();">Edit <img src="../static/Assets/edit.svg" alt=""></button>
+            </div>
+            <div id="details">
+                <h3>Email Address</h3>
+                <p id="emailaddress">Email Address</p>
+                <h3>Phone Number</h3>
+                <p id="number">Phone Number</p>
+                <h3>Address</h3>
+                <p id="address">Address</p>
+            </div>
+
+        </section>
+
+
+
+        <section class="blank"></section>
+        <section class="footer">
+            <div class="footer_head">
+                <p>
+                    <mark id="header">COMPANY</mark> <br> <a href="">Corporate policies</a> <br> <a href="">Investor relations</a> <br> <a href="">Sustainability</a> <br> <a href="">Sponsorships</a> <br> <a href="">Tender notice</a> <br> <a href="">Careers</a> <br> <a href="FlyingHighLab"></a><br>
+                </p>
+                <p>
+                    <mark id="header">GROUP PARTNER</mark> <br> <a href="">FlyingHighShop</a> <br> <a href="">FlyH+</a> <br> <a href="">Agent360</a> <br> <a href="">FlyConnect</a> <br>
+                </p>
+                <p>
+                    <mark id="header">WHERE WE FLY</mark> <br> <a href="">From Australia</a> <br> <a href="">Flights to countries</a> <br> <a href="">Flights to cities</a> <br>
+                </p>
+                <p>
+                    <mark id="header">SUPPORT</mark> <br> <a href="">FAQs</a> <br> <a href="">Help</a> <br> <a href="">Chatbot</a> <br> <a href="">Contact Us</a> <br> <a href="">Feedback</a> <br> <a href="">Mange voucher</a> <br> <a href="">User Engagement</a> <br>
+                </p>
+            </div>
+            <br>
+            <footer>
+                <img class="logo" src="../static/Assets/logo.png" alt=""><br>
+                <div class="info"><p><a href="">Privacy policy</a> | <a href="">Cookie policy</a> | <a href="">Terms & Conditions</a> | <a href="">Keep your data safe</a> | <a href="">Report Vulnerability</a></p></div>
+                <br><div class="info2"><p>Hyperlinks with this icon are links to third-party websites. Use of such websites is subject to their terms and conditions.</p></div>
+                <div class="links">
+                    <img src="../static/Assets/linkedin.png" alt="">
+                    <img src="../static/Assets/twitter.png" alt="">
+                    <img src="../static/Assets/youtube.svg" alt="">
+                    <img src="../static/Assets/instagram.png" alt="">
+                </div>
+
+            </footer>
+        </section>
+    </div>
+
+    <!-- SEPERATE -->
+
+
+
+    
+</body>
+<script src="../static/javascript/details.js"></script>
+</html>

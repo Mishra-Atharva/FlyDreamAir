@@ -48,7 +48,7 @@ def account_summary():
 
 @app.route('/account_rewards')
 def account_rewards():
-    return render_template('profile_rewards.html')
+    return render_template('profile_details.html')
 
 @app.route('/faq')
 def faq():

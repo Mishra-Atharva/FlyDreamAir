@@ -145,6 +145,12 @@ function update() {
         var new_user =  {
             "name": document.getElementById("first_name").value + " " + document.getElementById("last_name").value,
             "birth": document.getElementById("dob").value,
+            "nationality": "No-data",
+            "gender": "No-data",
+            "passport_number": "No-data",
+            "place_of_issue": "No-data",
+            "passport_expire": "No-data",
+            "phone_number": "No-data",
             "address": document.getElementById("address").value,
             "email": document.getElementById("email").value,
             "password": document.getElementById("password").value,

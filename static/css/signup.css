@@ -164,11 +164,11 @@ hr {
     box-sizing: border-box;
 }
 
-.first_name, .last_name, .email, .dob, .password, .departure {
+.first_name, .last_name, .email, .dob, .password, .departure, .address {
     margin: 20px;
 }
 
-#first_name, #last_name, #email, #dob, #password {
+#first_name, #last_name, #email, #dob, #password, #address{
     width: 100%;
     outline: none;
     font-family: "poppins";
@@ -177,15 +177,6 @@ hr {
     height: 50px;
     border-radius: 5px;
     border: 1px solid black;
-}
-
-#departure {
-    border: 1px solid black;
-    border-radius: 5px;
-    font-size: 16px;
-    font-family: "poppins";
-    width: 100%;
-    height: 50px;
 }
 
 .password_info {

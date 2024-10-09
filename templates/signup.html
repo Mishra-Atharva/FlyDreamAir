@@ -70,16 +70,16 @@
                         
                         <p id="p1">Complete all the fields marked with * </p>
                         
-                        <p id="p2">Register as FlyHigh member?</p>
+                        <!-- <p id="p2">Register as FlyHigh member?</p> -->
                     </div>
-                    
+<!--                     
                     <div class="radio">
                         <input type="radio" name="yes" id="yes">
                         <label for="yes">Yes</label>
                         
                         <input type="radio" name="no" id="no">
                         <label for="no">No</label>
-                    </div>
+                    </div> -->
                 </div>
                     <br>
                     <br>
@@ -109,8 +109,13 @@
                         <label for="password">Create Password *</label><br>
                         <input type="password" name="password" id="password" placeholder="Password">
                     </div>
+
+                    <div class="address">
+                        <label for="address">Address *</label><br>
+                        <input type="text" name="address" id="address" placeholder="Address">
+                    </div>
                     
-                    <div class="departure">
+                    <!-- <div class="departure">
                         <label for="departure">Select your preffered country of departure</label><br>
                         <select name="departure" id="departure">
                             <option value="" disabled selected>Select a country</option>
@@ -136,7 +141,7 @@
                             <option value="MY">Malaysia</option>
                             <option value="EG">Egypt</option>
                         </select>
-                    </div>
+                    </div> -->
                     
                     <div class="password_info">
                         <p>Your password must contain 8 to 16 alphanumeric characters and should be a combination of a number (0-9), lowercase letter (a-z), uppercase letter (A-Z) and special character (!@#$%^&*()).</p>
@@ -155,7 +160,7 @@
                 </div>
                 <br>
                 <br>
-                <button class="create">Create Account</button>
+                <button class="create" onclick="update();">Create Account</button>
                 <br>
                 <br>
                 <br>

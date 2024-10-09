@@ -40,10 +40,10 @@ function get_data() {
                         localStorage.setItem("user", JSON.stringify(details[i]));
                     }
                 }
+                logged_in();
             }
-            logged_in();
         }
-    }
+    };
     server.send();
 }
 
@@ -53,35 +53,32 @@ window.onload = function() {
 };
 
 function logged_in() {
-    if (logged == 'true')
-        {
-            document.getElementById("account").style.display = "none";
-            document.getElementById("logout").style.display = "flex";
-    
-            document.getElementById("flynumber").innerHTML = "FlyHigh: " + user["flynumber"];
-            document.getElementById("miles").innerHTML = user["miles"] + " Flyer Miles";
-            document.getElementById("name").innerHTML = user["name"];
-            document.getElementById("email_account").innerHTML = user["email"];
-            document.getElementById("birth").innerHTML = user["birth"];
-            document.getElementById("membership").innerHTML = user["status"];
-    
-            calculate();
-    
-            var background = "conic-gradient(rgb(193, 174, 112) 0% " + percent + "%, lightgray " + percent + "% 100%)";
-            document.getElementById("progress").style.background = background;
-            document.getElementById("miles_display").innerHTML = user["miles"];
-            document.getElementById("expire").innerHTML = "Expires - " +user["expires"];
-    
-            var items = user['purchased'];
-            items.forEach(item => {
-                var div = `<div class="card">
-                            <img src="${item["image"]}" alt="">
-                            <h3>${item["item"]}</h3>
-                        </div>`;
+    document.getElementById("account").style.display = "none";
+    document.getElementById("logout").style.display = "flex";
 
-                document.querySelector(".screen").innerHTML += div;
-            })
-        }
+    document.getElementById("flynumber").innerHTML = "FlyHigh: " + user["flynumber"];
+    document.getElementById("miles").innerHTML = user["miles"] + " Flyer Miles";
+    document.getElementById("name").innerHTML = user["name"];
+    document.getElementById("email_account").innerHTML = user["email"];
+    document.getElementById("birth").innerHTML = user["birth"];
+    document.getElementById("membership").innerHTML = user["status"];
+
+    calculate();
+
+    var background = "conic-gradient(rgb(193, 174, 112) 0% " + percent + "%, lightgray " + percent + "% 100%)";
+    document.getElementById("progress").style.background = background;
+    document.getElementById("miles_display").innerHTML = user["miles"];
+    document.getElementById("expire").innerHTML = "Expires - " +user["expires"];
+
+    var items = user['purchased'];
+    items.forEach(item => {
+        var div = `<div class="card">
+                    <img src="${item["image"]}" alt="">
+                    <h3>${item["item"]}</h3>
+                </div>`;
+
+        document.querySelector(".screen").innerHTML += div;
+    });
 }
 
 

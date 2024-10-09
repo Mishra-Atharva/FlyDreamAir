@@ -50,6 +50,9 @@ def account_summary():
 def account_rewards():
     return render_template('profile_rewards.html')
 
+@app.route('/faq')
+def faq():
+    return render_template('faq.html')
 
 @app.route('/get_data', methods=['GET'])
 def get_data():

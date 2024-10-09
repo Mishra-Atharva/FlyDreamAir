@@ -21,52 +21,25 @@ document.getElementById("close").addEventListener("click", () => {
 
 window.onload = function() {
     document.body.style.visibility = 'visible';
+    get_data();
     var logged = localStorage.getItem("logged in");
-    console.log(logged);
     if (logged)
     {
         document.getElementById("account").style.display = "none";
         document.getElementById("logout").style.display = "flex";
     }
-    else {
-        // creates an XMLHttpRequest
-        var xhttp = new XMLHttpRequest();
-
-        // creates an handler for the readyState change
-        xhttp.onreadystatechange = function () {
-
-            // Calling readSateChangeHandler function
-            readyStateChangeHandler(xhttp);
-        };
-
-        // Gets JSON file
-        xhttp.open("GET", "../user.json", true);
-        xhttp.send();
-    }
 };
 
-function readyStateChangeHandler(xhttp) {
-    // Checks if the status is success or failure
-    if (xhttp.readyState == 4) {
-        if (xhttp.status == 200) {
-            handleStatusSuccess(xhttp);
-        } else {
-            handleStatusFailure(xhttp);
+function get_data() {
+    var server = new XMLHttpRequest();
+
+    server.open("GET", "/get_data", true);
+    server.onload = function() {
+        if (server.status == 200) {
+            details = JSON.parse(server.responseText);
         }
     }
-}
-
-// If failure display error
-function handleStatusFailure(xhttp) {
-    console.log("XMLHttpRequest failed: status " + xhttp.status);
-}
-
-// If success
-function handleStatusSuccess(xhttp) {
-    console.log("Details are loaded!");
-    var jsonText = xhttp.responseText;
-    
-    details = JSON.parse(jsonText);
+    server.send();
 }
 
 function login() {
@@ -97,4 +70,106 @@ function login() {
 function logout() {
     localStorage.clear();
     window.location.replace("/");
+}
+
+
+function validate(password) {
+    let upper_bool = false;
+    let lower_bool = false;
+    let special_bool = false;
+    const special = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
+    const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+    if (password.length >= 8 && password.length <= 16) {
+        for (var i = 0; i < password.length; ++i) {
+            for (var x = 0; x < letters.length; ++x) {
+                if (password[i] == letters[x]) {
+                    upper_bool = true;
+                    break;
+                }
+            }
+            for (var x = 0; x < letters.length; ++x) {
+                if (password[i] == letters[x].toLowerCase()) {
+                    lower_bool = true;
+                    break;
+                }
+            }
+            for (var x = 0; x < special.length; ++x) {
+                if (password[i] == special[x]) {
+                    special_bool = true;
+                    break;
+                }
+            }
+        }
+    }
+
+    if (upper_bool == true, lower_bool == true, special_bool == true) {
+        document.getElementById("password").style.borderColor =  "black";
+        return true;
+    } else {
+        document.getElementById("password").style.borderColor =  "red";
+        return false;
+    }
+}
+
+
+
+function update() {
+    var create = false;
+    var pass = false;
+    let items = [
+        document.getElementById("first_name"),
+        document.getElementById("last_name"),
+        document.getElementById("dob"),
+        document.getElementById("address"),
+        document.getElementById("email")
+    ];
+
+    if (validate(document.getElementById("password").value) == true) {
+        pass = true;
+    }
+
+    items.forEach(item => {
+        if (item.value != "")
+        {
+            item.style.borderColor = "black";
+            create = true;
+        } else {
+            item.style.borderColor = "red";
+            create = false;
+        }
+    });
+
+
+    if (document.getElementById("accept").checked == true && create && pass) 
+    {
+        var new_user =  {
+            "name": document.getElementById("first_name").value + " " + document.getElementById("last_name").value,
+            "birth": document.getElementById("dob").value,
+            "address": document.getElementById("address").value,
+            "email": document.getElementById("email").value,
+            "password": document.getElementById("password").value,
+            "flynumber": Math.abs(Math.floor(Math.random() * (10000000000 - 99999999999 + 1) + 10000000000)),
+            "status": "silver",
+            "miles": 0,
+            "expires": "1/01/2025",
+            "cart": [],
+            "purchased": []
+        }
+    
+        details.push(new_user);
+        
+        var jsonData = JSON.stringify(details, null, 2);
+        
+        let server = new XMLHttpRequest();
+        server.open("POST", "/update_data", true);
+        server.setRequestHeader("Content-Type", "application/json");
+        server.onload = function() {
+            if (server.status === 200) {
+                console.log("Data updated successfully!");
+            }
+        };
+        server.send(jsonData);
+
+        window.location.replace("/");
+    }
 }

@@ -51,12 +51,12 @@
                     <label for="gender">Gender</label><br>
                     <select name="gender" id="user_gender">
                         <option value="N" disabled selected>Select a gender</option>
-                        <option value="M">Male</option>
-                        <option value="F">Female</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
                     </select>
                 </div>
                 <br>
-                <button class="save">Save</button>
+                <button class="save" onclick="savePersonal();">Save</button>
             </div>
         </div>
 
@@ -78,7 +78,7 @@
                     <input type="text" name="expire" id="expire" placeholder="">
                 </div>
                 <br>
-                <button class="save">Save</button>
+                <button class="save" onclick="savePassport();">Save</button>
             </div>
         </div>
         
@@ -100,7 +100,7 @@
                     <input type="text" name="address" id="home_address" placeholder="">
                 </div>
                 <br>
-                <button class="save">Save</button>
+                <button class="save" onclick="saveContact();">Save</button>
             </div>
         </div>
     </div>

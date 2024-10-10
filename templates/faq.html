@@ -119,8 +119,28 @@
         <div class="panel">
             <p>You can use your points to purchase flight tickets on a discounted point, upgrade seat plan, get discounta on certain hotels and more.</p>
         </div>
+
+        <button class="accordion">Why am I unable to redeem points?</button>
+        <div class="panel">
+            <p>If you're experiencing difficulties redeeming points, it may be due to having restrictions on the selected flight, or technical issues. You can review the terms and conditions of our frequent flyer program or reach out to customer support for assistance.</p>
+        </div>
     </div>
     </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
 
 <section class="footer">
     <div class="footer_head">

@@ -8,11 +8,11 @@
 
         <style>
             .faq-bg{
-                background-color: #f0f0f0;
+                background-color: #c1ae70;
             }
 
             .faq-container {
-                background-color: #96989f;
+                background-color: #c1ae70;
                 color: white;
                 text-align: center;
                 padding: 50px 20px;
@@ -22,7 +22,7 @@
                 font-size: 32px;
             }
             .faq-section {
-                background-color: #f0f0f0;
+                background-color: #c1ae70;
                 padding: 40px;
                 margin: auto;
                 width: 60%;
@@ -39,7 +39,7 @@
                 transition: 0.4s;
             }
             .accordion:hover {
-                background-color: #cccccc;
+                background-color: #e4dfb3;
             }
             .panel {
                 padding: 0 15px;
@@ -75,10 +75,10 @@
             <nav>
                 <a href="{{url_for('home')}}"><img src="./static/Assets/logo.png" alt=""></a>
                 <ul>
-                    <li><a href="">PLAN TRAVEL</a></li>
-                    <li><a href="">FLYING WITH US</a></li>
                     <li><a href="{{url_for('store')}}">STORE</a></li>
                     <li><a href="{{url_for('faq')}}">FAQ</a></li>
+                    <li><a href="{{url_for('feedback')}}">FEEDBACK</a></li>
+                    <li><a href="{{url_for('contact')}}">CONTACT US</a></li>
                     <li><a href="{{url_for('account_summary')}}">ACCOUNT</a></li>
                 </ul>
                 <div id="account">
@@ -125,6 +125,7 @@
             <p>If you're experiencing difficulties redeeming points, it may be due to having restrictions on the selected flight, or technical issues. You can review the terms and conditions of our frequent flyer program or reach out to customer support for assistance.</p>
         </div>
     </div>
+    <br><br>>
     </div>
 
     <script>
@@ -154,7 +155,7 @@
             <mark id="header">WHERE WE FLY</mark> <br> <a href="">From Australia</a> <br> <a href="">Flights to countries</a> <br> <a href="">Flights to cities</a> <br>
         </p>
         <p>
-            <mark id="header">SUPPORT</mark> <br> <a href="">FAQs</a> <br> <a href="">Help</a> <br> <a href="">Chatbot</a> <br> <a href="">Contact Us</a> <br> <a href="">Feedback</a> <br> <a href="">Mange voucher</a> <br> <a href="">User Engagement</a> <br>
+            <mark id="header">SUPPORT</mark> <br> <a href="">FAQs</a> <br> <a href="">Help</a> <br> <a href="">Chatbot</a> <br> <a href="">Contact Us</a> <br> <a href="">Feedback</a> <br> <a href="">Manage voucher</a> <br> <a href="">User Engagement</a> <br>
         </p>
     </div>
     <br>
@@ -171,7 +172,6 @@
 
     </footer>
 </section>
-    
 </body>
 <script src="../static/javascript/script.js"></script>
 </html>

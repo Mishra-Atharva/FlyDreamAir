@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>FlyDreamAir - Contact Us</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../static/Assets/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="../static/css/style.css">
+
+        <style>
+            .contact-bg{
+                background-color: #c1ae70;
+            }
+            .contact-section {
+                background-color: #c1ae70;
+                padding: 40px;
+                margin: auto;
+                width: 60%;
+            }
+            .contact-container h1 {
+                color:white;
+                margin: 0;
+                font-size: 52px;
+                text-align:center;
+                position: absolute;
+                top: 27%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .contact-text {
+                font-size: 30px;
+            }
+            .contact-space {
+                font-size: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="cover">
+            <div class="form">
+                <img href="" src="./static/Assets/close.svg" alt="" id="close">
+                <h1>LOGIN</h1>
+                <div class="inputs">
+                    <input type="text" id="email" placeholder="Fly High number / Email Address">
+                    <input type="password" id="password" placeholder="Password">
+                    <div class="options">
+                        <input type="checkbox" name="checkb" id="remember"> 
+                        <label for="checkb" id="remember_label">Remember me</label>
+                        <a href="">Reset Password</a>
+                    </div>
+                </div>
+                <button onclick="login();">Login</button>
+                <div class="buttons">
+                    <a href="">Forgot Memebership number</a>
+                    <p>Not a FlyHigh member? <a href="">Join now</a></p>
+                </div>
+            </div>
+        </div>
+        <header>
+            <nav>
+                <a href="{{url_for('home')}}"><img src="./static/Assets/logo.png" alt=""></a>
+                <ul>
+                    <li><a href="{{url_for('store')}}">STORE</a></li>
+                    <li><a href="{{url_for('faq')}}">FAQ</a></li>
+                    <li><a href="{{url_for('feedback')}}">FEEDBACK</a></li>
+                    <li><a href="{{url_for('contact')}}">CONTACT US</a></li>
+                    <li><a href="{{url_for('account_summary')}}">ACCOUNT</a></li>
+                </ul>
+                <div id="account">
+                    <a href="javascript:void(0);" onclick="login_show();">LOGIN</a> | <a href="{{url_for('signup')}}">SIGN UP</a>
+                </div>
+                <div id="logout">
+                    <a href="javascript:void(0);" onclick="logout();">LOG OUT</a>
+                </div>
+            </nav>
+
+    <div class="contact-container">
+        <img src="../static/Assets/header.jpg" width="100%" height="35%">
+        <h1>Contact Us</h1>
+    </div>
+
+    <div class="contact-bg">
+    <div class="contact-section">
+    <table>
+        <tr>
+            <td class="contact-space"> &nbsp; </td>
+        </tr>
+        <tr>
+            <td><img src="../static/Assets/call.png" width="40px"></td>
+            <td> &nbsp; </td>
+            <td class="contact-text">1800 650 760</td>
+        </tr>
+        <tr>
+            <td> &nbsp; </td>
+        </tr>
+        </tr>
+        <tr>
+            <td><img src="../static/Assets/mail.png" width="40px"></td>
+            <td> &nbsp; </td>
+            <td class="contact-text">support@flydreamair.com.au</td>
+        </tr>
+        <tr>
+            <td class="contact-space"> &nbsp; </td>
+        </tr>
+    </table>
+    </div>
+    </div>
+
+<section class="footer">
+    <div class="footer_head">
+        <p>
+            <mark id="header">COMPANY</mark> <br> <a href="">Corporate policies</a> <br> <a href="">Investor relations</a> <br> <a href="">Sustainability</a> <br> <a href="">Sponsorships</a> <br> <a href="">Tender notice</a> <br> <a href="">Careers</a> <br> <a href="FlyingHighLab"></a><br>
+        </p>
+        <p>
+            <mark id="header">GROUP PARTNER</mark> <br> <a href="">FlyingHighShop</a> <br> <a href="">FlyH+</a> <br> <a href="">Agent360</a> <br> <a href="">FlyConnect</a> <br>
+        </p>
+        <p>
+            <mark id="header">WHERE WE FLY</mark> <br> <a href="">From Australia</a> <br> <a href="">Flights to countries</a> <br> <a href="">Flights to cities</a> <br>
+        </p>
+        <p>
+            <mark id="header">SUPPORT</mark> <br> <a href="">FAQs</a> <br> <a href="">Help</a> <br> <a href="">Chatbot</a> <br> <a href="">Contact Us</a> <br> <a href="">Feedback</a> <br> <a href="">Manage voucher</a> <br> <a href="">User Engagement</a> <br>
+        </p>
+    </div>
+    <br>
+    <footer>
+        <img class="logo" src="../static/Assets/logo.png" alt=""><br>
+        <div class="info"><p><a href="">Privacy policy</a> | <a href="">Cookie policy</a> | <a href="">Terms & Conditions</a> | <a href="">Keep your data safe</a> | <a href="">Report Vulnerability</a></p></div>
+        <br><div class="info2"><p>Hyperlinks with this icon are links to third-party websites. Use of such websites is subject to their terms and conditions.</p></div>
+        <div class="links">
+            <img src="../static/Assets/linkedin.png" alt="">
+            <img src="../static/Assets/twitter.png" alt="">
+            <img src="../static/Assets/youtube.svg" alt="">
+            <img src="../static/Assets/instagram.png" alt="">
+        </div>
+
+    </footer>
+</section>
+</body>
+<script src="../static/javascript/script.js"></script>
+</html>

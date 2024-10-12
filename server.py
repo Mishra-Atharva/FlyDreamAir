@@ -2,7 +2,7 @@ import subprocess
 import sys
 
 def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip3", "install", package])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
 # Try importing libraries and installing them if not found
 try:
@@ -53,6 +53,14 @@ def account_rewards():
 @app.route('/faq')
 def faq():
     return render_template('faq.html')
+
+@app.route('/feedback')
+def feedback():
+    return render_template('feedback.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact us.html')
 
 @app.route('/get_data', methods=['GET'])
 def get_data():

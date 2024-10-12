@@ -1,0 +1,168 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>FlyDreamAir - Feedback Us</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../static/Assets/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="../static/css/style.css">
+
+        <style>
+            .feedback-bg {
+                background-color: #c1ae70;
+            }
+            .feedback-section {
+                background-color: #c1ae70;
+                padding: 40px;
+                margin: auto;
+                width: 60%;
+            }
+            .feedback-container {
+                background-color: #c1ae70;
+                color: white;
+                text-align: center;
+                padding: 50px 20px;
+            }
+            .feedback-container h1 {
+                margin: 0;
+                font-size: 52px;
+            }
+            .feedback-form {
+                font-size: 24px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            .feedback-form input[type="text"],
+            .feedback-form input[type="email"],
+            .feedback-form textarea {
+                font-size: 18px;
+                width: 50%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                border: 1px solid #cccccc;
+            }
+            .feedback-form input[type="submit"] {
+                background-color: #635e4d;
+                color: white;
+                border: none;
+                padding: 15px 30px;
+                font-size: 18px;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+            .feedback-form input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="cover">
+            <div class="form">
+                <img href="" src="./static/Assets/close.svg" alt="" id="close">
+                <h1>LOGIN</h1>
+                <div class="inputs">
+                    <input type="text" id="email" placeholder="Fly High number / Email Address">
+                    <input type="password" id="password" placeholder="Password">
+                    <div class="options">
+                        <input type="checkbox" name="checkb" id="remember"> 
+                        <label for="checkb" id="remember_label">Remember me</label>
+                        <a href="">Reset Password</a>
+                    </div>
+                </div>
+                <button onclick="login();">Login</button>
+                <div class="buttons">
+                    <a href="">Forgot Memebership number</a>
+                    <p>Not a FlyHigh member? <a href="">Join now</a></p>
+                </div>
+            </div>
+        </div>
+        <header>
+            <nav>
+                <a href="{{url_for('home')}}"><img src="./static/Assets/logo.png" alt=""></a>
+                <ul>
+                    <li><a href="{{url_for('store')}}">STORE</a></li>
+                    <li><a href="{{url_for('faq')}}">FAQ</a></li>
+                    <li><a href="{{url_for('feedback')}}">FEEDBACK</a></li>
+                    <li><a href="{{url_for('contact')}}">CONTACT US</a></li>
+                    <li><a href="{{url_for('account_summary')}}">ACCOUNT</a></li>
+                </ul>
+                <div id="account">
+                    <a href="javascript:void(0);" onclick="login_show();">LOGIN</a> | <a href="{{url_for('signup')}}">SIGN UP</a>
+                </div>
+                <div id="logout">
+                    <a href="javascript:void(0);" onclick="logout();">LOG OUT</a>
+                </div>
+            </nav>
+
+    <div class="feedback-container">
+        <h1>Leave Us Feedback</h1>
+    </div>
+
+    <div class="feedback-bg">
+    <div class="feedback-section">
+
+        <div class="feedback-text">
+            <p><div class="feedback-form"><input size="40" maxlength="400" type="text" name="your-name" id="name" placeholder="Your Name" /></div>
+            </p>
+        </div>
+        <div class="feedback-text">
+            <p><div class="feedback-form"><input size="40" maxlength="400" type="email" name="your-email" id="email" placeholder="Your Email" /></div>
+            </p>
+        </div>
+        <div class="feedback-text">
+            <p><div class="feedback-form"><input size="40" maxlength="400" type="text" name="customer-id" id="customer_id" placeholder="Customer ID" /></div>
+            </p>
+        </div>
+        <div class="feedback-text">
+            <p><div class="feedback-form"><input size="40" maxlength="400" type="text" name="your-phone" id="phone" placeholder="Phone" /></div>
+            </p>
+        </div>
+        <div class="feedback-text">
+            <p><div class="feedback-form"><input size="40" maxlength="400" type="text" name="your-subject" id="subject" placeholder="Subject" /></div>
+            </p>
+        </div>
+        <div class="feedback-text">
+            <p><div class="feedback-form"><textarea cols="40" rows="4" maxlength="2000"name="your-message" id="message" placeholder="Your Message"></textarea></div>
+            </p>
+        </div>
+        <div class="feedback-text">
+            <p><div class="feedback-form"><input type="submit" value="Send" /></div>
+            </p>
+        </div>
+
+    </div>
+    </div>
+
+<section class="footer">
+    <div class="footer_head">
+        <p>
+            <mark id="header">COMPANY</mark> <br> <a href="">Corporate policies</a> <br> <a href="">Investor relations</a> <br> <a href="">Sustainability</a> <br> <a href="">Sponsorships</a> <br> <a href="">Tender notice</a> <br> <a href="">Careers</a> <br> <a href="FlyingHighLab"></a><br>
+        </p>
+        <p>
+            <mark id="header">GROUP PARTNER</mark> <br> <a href="">FlyingHighShop</a> <br> <a href="">FlyH+</a> <br> <a href="">Agent360</a> <br> <a href="">FlyConnect</a> <br>
+        </p>
+        <p>
+            <mark id="header">WHERE WE FLY</mark> <br> <a href="">From Australia</a> <br> <a href="">Flights to countries</a> <br> <a href="">Flights to cities</a> <br>
+        </p>
+        <p>
+            <mark id="header">SUPPORT</mark> <br> <a href="">FAQs</a> <br> <a href="">Help</a> <br> <a href="">Chatbot</a> <br> <a href="">Contact Us</a> <br> <a href="">Feedback</a> <br> <a href="">Manage voucher</a> <br> <a href="">User Engagement</a> <br>
+        </p>
+    </div>
+    <br>
+    <footer>
+        <img class="logo" src="../static/Assets/logo.png" alt=""><br>
+        <div class="info"><p><a href="">Privacy policy</a> | <a href="">Cookie policy</a> | <a href="">Terms & Conditions</a> | <a href="">Keep your data safe</a> | <a href="">Report Vulnerability</a></p></div>
+        <br><div class="info2"><p>Hyperlinks with this icon are links to third-party websites. Use of such websites is subject to their terms and conditions.</p></div>
+        <div class="links">
+            <img src="../static/Assets/linkedin.png" alt="">
+            <img src="../static/Assets/twitter.png" alt="">
+            <img src="../static/Assets/youtube.svg" alt="">
+            <img src="../static/Assets/instagram.png" alt="">
+        </div>
+
+    </footer>
+</section>
+    
+</body>
+<script src="../static/javascript/script.js"></script>
+</html>

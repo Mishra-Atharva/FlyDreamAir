@@ -65,7 +65,7 @@ function logged_in() {
         document.getElementById("account").style.display = "none";
         document.getElementById("logout").style.display = "flex";
         document.getElementById("flynumber").innerHTML = "FlyHigh: " + user["flynumber"];
-        document.getElementById("miles").innerHTML = user["miles"] + " Flyer Miles";
+        document.getElementById("miles").innerHTML = user["miles"] + " Flyer Points";
         document.getElementById("name").innerHTML = user["name"];
         document.getElementById("dob").innerHTML = user["birth"];
         document.getElementById("nationality").innerHTML = user["nationality"];

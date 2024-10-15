@@ -120,6 +120,7 @@ flight_buttons.forEach(button => {
                 "image": image
             };
             updatefile();
+            alert("Item has been added to the cart!");
         }
     });
 });
@@ -144,6 +145,7 @@ hotel_buttons.forEach(button => {
                 "image": image
             };
             updatefile();
+            alert("Item has been added to the cart!");
         }
     });
 });
@@ -168,6 +170,7 @@ product_buttons.forEach(button => {
                 "image": image
             };
             updatefile();
+            alert("Item has been added to the cart!");
         }
     });
 });

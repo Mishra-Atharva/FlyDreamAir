@@ -53,11 +53,22 @@ window.onload = function() {
 };
 
 function logged_in() {
+
+    if (user["miles"] > 150000 && user["status"] == "Silver") {
+        user["staus"] = "Gold";
+        for (var i = 0; i < details.length; ++i) {
+            if (details[i]["name"] == user["name"]) {
+                details[i]["status"] = "Gold";
+            }
+        }
+        updatefile();
+    }
+
     document.getElementById("account").style.display = "none";
     document.getElementById("logout").style.display = "flex";
 
     document.getElementById("flynumber").innerHTML = "FlyHigh: " + user["flynumber"];
-    document.getElementById("miles").innerHTML = user["miles"] + " Flyer Miles";
+    document.getElementById("miles").innerHTML = user["miles"] + " Flyer Points";
     document.getElementById("name").innerHTML = user["name"];
     document.getElementById("email_account").innerHTML = user["email"];
     document.getElementById("birth").innerHTML = user["birth"];
@@ -114,13 +125,28 @@ function logout() {
 
 function calculate()
 {
-    if (user['status'] == "silver")
+    if (user['status'] == "Silver")
     {
         percent = (parseInt(user["miles"]) / gold ) * 100;
     }
 
-    if (user['status'] == "gold")
+    if (user['status'] == "Gold")
     {
         percent = (parseInt(user["miles"]) / 1000000) * 100;
     }
+}
+
+function updatefile() {
+    var jsonData = JSON.stringify(details, null, 2);
+    
+    // NEW
+    var server = new XMLHttpRequest();
+    server.open("POST", "/update_data", true);
+    server.setRequestHeader("Content-Type", "application/json");
+    server.onload = function() {
+        if (server.status === 200) {
+            console.log("Data updated successfully!");
+        }
+    };
+    server.send(jsonData);
 }

@@ -12,7 +12,7 @@
             <a href=""><img src="../static/Assets/close.svg" alt="" id="close"> </a>
             <h1>LOGIN</h1>
             <div class="inputs">
-                <input type="text" id="email_input" placeholder="Fly High number / Email Address">
+                <input type="text" id="email_input" placeholder="Email Address">
                 <input type="password" id="password_input" placeholder="Password">
                 <div class="options">
                     <input type="checkbox" name="checkb" id="remember"> 
@@ -23,7 +23,7 @@
             <button onclick="login();">Login</button>
             <div class="buttons">
                 <a href="">Forgot Memebership number</a>
-                <p>Not a FlyHigh member? <a href="">Join now</a></p>
+                <p>Not a FlyHigh member? <a href="{{url_for('signup')}}">Join now</a></p>
             </div>
         </div>
     </div>

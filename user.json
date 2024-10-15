@@ -7,7 +7,7 @@
     "expires": "1/01/2025",
     "flynumber": 16831135096,
     "gender": "Male",
-    "miles": 760000,
+    "miles": 825000,
     "name": "Atharva Mishra",
     "nationality": "Indian",
     "passport_expire": "19th September 2034",
@@ -15,7 +15,12 @@
     "password": "Atharva16205!",
     "phone_number": "0449580953",
     "place_of_issue": "Australia, Sydney",
-    "purchased": [],
+    "purchased": [
+      {
+        "image": "../static/Assets/location6.jpg",
+        "item": "Sydney to Brisbane"
+      }
+    ],
     "status": "Gold"
   },
   {

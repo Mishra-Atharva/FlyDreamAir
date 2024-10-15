@@ -25,17 +25,17 @@
     "email": "emilysmith@gmail.com",
     "expires": "1/01/2025",
     "flynumber": 9374322285,
-    "gender": "No-data",
+    "gender": "Female",
     "miles": 0,
     "name": "Emily Smith",
-    "nationality": "No-data",
+    "nationality": "American",
     "passport_expire": "No-data",
     "passport_number": "No-data",
     "password": "Emily1968!",
     "phone_number": "No-data",
     "place_of_issue": "No-data",
     "purchased": [],
-    "status": "silver"
+    "status": "Silver"
   },
   {
     "address": "123 Oakwood Lane, Springfield, IL 62704, USA",
@@ -54,25 +54,25 @@
     "phone_number": "No-data",
     "place_of_issue": "No-data",
     "purchased": [],
-    "status": "silver"
+    "status": "Silver"
   },
   {
-    "name": "Alex Johnson",
-    "birth": "15/10/1989",
-    "nationality": "No-data",
-    "gender": "No-data",
-    "passport_number": "No-data",
-    "place_of_issue": "No-data",
-    "passport_expire": "No-data",
-    "phone_number": "No-data",
     "address": "221B Baker Street London, NW1 6XE, United Kingdom",
-    "email": "alexjohnson@gmail.com",
-    "password": "Alex1979!",
-    "flynumber": 6926292448,
-    "status": "silver",
-    "miles": 0,
-    "expires": "1/01/2025",
+    "birth": "15/10/1989",
     "cart": [],
-    "purchased": []
+    "email": "alexjohnson@gmail.com",
+    "expires": "1/01/2025",
+    "flynumber": 6926292448,
+    "gender": "Male",
+    "miles": 0,
+    "name": "Alex Johnson",
+    "nationality": "United Kingdom",
+    "passport_expire": "No-data",
+    "passport_number": "No-data",
+    "password": "Alex1979!",
+    "phone_number": "No-data",
+    "place_of_issue": "No-data",
+    "purchased": [],
+    "status": "Silver"
   }
 ]

@@ -155,7 +155,7 @@ function update() {
             "email": document.getElementById("email").value,
             "password": document.getElementById("password").value,
             "flynumber": Math.abs(Math.floor(Math.random() * (10000000000 - 99999999999 + 1) + 10000000000)),
-            "status": "silver",
+            "status": "Silver",
             "miles": 0,
             "expires": "1/01/2025",
             "cart": [],

@@ -10,11 +10,8 @@
     "miles": 825000,
     "name": "Atharva Mishra",
     "nationality": "Indian",
-    "passport_expire": "19th September 2034",
-    "passport_number": "U0645820",
     "password": "Atharva16205!",
     "phone_number": "0449580953",
-    "place_of_issue": "Australia, Sydney",
     "purchased": [
       {
         "image": "../static/Assets/location6.jpg",
@@ -34,11 +31,8 @@
     "miles": 0,
     "name": "Emily Smith",
     "nationality": "American",
-    "passport_expire": "No-data",
-    "passport_number": "No-data",
     "password": "Emily1968!",
     "phone_number": "No-data",
-    "place_of_issue": "No-data",
     "purchased": [],
     "status": "Silver"
   },
@@ -53,11 +47,8 @@
     "miles": 0,
     "name": "Michael Brown",
     "nationality": "No-data",
-    "passport_expire": "No-data",
-    "passport_number": "No-data",
     "password": "Michael1984!",
     "phone_number": "No-data",
-    "place_of_issue": "No-data",
     "purchased": [],
     "status": "Silver"
   },
@@ -72,11 +63,8 @@
     "miles": 0,
     "name": "Alex Johnson",
     "nationality": "United Kingdom",
-    "passport_expire": "No-data",
-    "passport_number": "No-data",
     "password": "Alex1979!",
     "phone_number": "No-data",
-    "place_of_issue": "No-data",
     "purchased": [],
     "status": "Silver"
   }

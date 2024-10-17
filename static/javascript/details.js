@@ -166,38 +166,38 @@ function savePersonal() {
     window.location.reload();
 }
 
-function closePassport() {
-    document.querySelector(".blind").style.display = "none";
-    document.querySelector(".contain_passport").style.display = "none";
-}
+// function closePassport() {
+//     document.querySelector(".blind").style.display = "none";
+//     document.querySelector(".contain_passport").style.display = "none";
+// }
 
-function updatePassport() {
-    if (logged)
-    {
-        document.querySelector(".blind").style.display = "flex";
-        document.querySelector(".contain_passport").style.display = "flex";
-        document.querySelector("#pass_num").value = document.querySelector("#passport_number").textContent;
-        document.querySelector("#issue").value = document.querySelector("#passport_issue").textContent;
-        document.querySelector("#expire").value = document.querySelector("#passport_expire").textContent;
-    }
-}
+// function updatePassport() {
+//     if (logged)
+//     {
+//         document.querySelector(".blind").style.display = "flex";
+//         document.querySelector(".contain_passport").style.display = "flex";
+//         document.querySelector("#pass_num").value = document.querySelector("#passport_number").textContent;
+//         document.querySelector("#issue").value = document.querySelector("#passport_issue").textContent;
+//         document.querySelector("#expire").value = document.querySelector("#passport_expire").textContent;
+//     }
+// }
 
-function savePassport() {
-    for (var i = 0; i < details.length; ++i) {
+// function savePassport() {
+//     for (var i = 0; i < details.length; ++i) {
 
-        if (user["name"] == details[i]["name"]) {
-            let passport_number = document.querySelector("#pass_num").value;
-            let issue = document.querySelector("#issue").value;
-            let expire = document.querySelector("#expire").value;
+//         if (user["name"] == details[i]["name"]) {
+//             let passport_number = document.querySelector("#pass_num").value;
+//             let issue = document.querySelector("#issue").value;
+//             let expire = document.querySelector("#expire").value;
             
-            details[i]["passport_number"] = passport_number;
-            details[i]["place_of_issue"] = issue;
-            details[i]["passport_expire"] = expire;
-        }
-    }
-    updatefile();
-    window.location.reload();
-}
+//             details[i]["passport_number"] = passport_number;
+//             details[i]["place_of_issue"] = issue;
+//             details[i]["passport_expire"] = expire;
+//         }
+//     }
+//     updatefile();
+//     window.location.reload();
+// }
 
 function closeContact() {
     document.querySelector(".blind").style.display = "none";

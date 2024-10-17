@@ -250,6 +250,9 @@ function update()
             total += parseInt(price.textContent.replace("POINTS ", ""));
         });
 
+        subtotal.innerHTML = "POINTS " + total;
+        count.innerHTML = "ITEMS " + counter;
+
         if (ship == "free" || ship == "none") {
     
             total_price.innerHTML = "POINTS " + total;
@@ -326,7 +329,6 @@ function checkout() {
                 }
                 item.querySelector(".remove").click();
             });
-            alert(points);
             for (var i = 0; i < details.length; ++i) {
                 if (details[i]['email'] == user['email']) {
                     details[i]["cart"] = [];
